@@ -1,0 +1,23 @@
+print ("Hello world")
+mkdir new_dir
+rm -r new_dir
+cp sed.txt /lorem-copy
+cp at.txt /lorem-copy; cp lorem.txt /lorem-copy
+cd /lorem
+cat sed.txt
+cat at.txt
+cat lorem.txt
+cd /lorem-copy
+head -n 3 sed.txt
+tail -n 3 sed.txt
+nano sed.txt
+tail -n 3 sed.txt
+sed 's/et/ET/' at.txt
+whoami
+pwd
+cd /lorem; ls *.txt
+wc -l sed.txt
+ls /lab-bash-master/lorem* | wc -l
+cd /lorem
+grep -o -i et at.txt | wc -l 
+
