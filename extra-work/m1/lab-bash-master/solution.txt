@@ -1,0 +1,98 @@
+# Print Hello World in console
+echo "Hello World"
+
+# Create a new folder named new_dir
+mkdir new_dir
+
+# Delete new_dir folder
+rmdir new_dir/
+
+# Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+cp lorem/sed.txt lorem-copy/
+
+# Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+cp lorem/* lorem-copy/
+
+# Locate at lorem folder and show sed.txt content
+cat lorem/sed.txt
+
+# Locate at lorem folder and show at.txt and lorem.txt content
+cat lorem/at.txt ;cat lorem/lorem.txt
+
+# Locate at lorem-copy folder and show the first three lines of sed.txt
+cat lorem-copy/sed.txt | head -n3
+
+# Locate at lorem-copy folder and show the last three lines of sed.txt
+cat lorem-copy/sed.txt | tail -n3
+
+# Add Homo homini lupus. at the end of sed.txt located at lorem-copy
+echo "Homo homini lupus." >> lorem-copy/sed.txt
+
+# Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+cat lorem-copy/sed.txt | tail -n3
+
+# Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+sed -i 's/et/ET/g' lorem-copy/at.txt
+
+# Find the active user of the system
+whoami
+
+# Find out where are you located within the system
+pwd
+
+# List all .txt files located at lorem
+ls lorem/*.txt
+
+# Count the number of lines in sed.txt located at lorem
+cat lorem/sed.txt | wc -l
+
+# Count the number of files which name starts with lorem located at the whole lab directory
+find . -type f -name 'lorem*' | wc -l
+
+# Count the number of times et appears in at.txt located at lorem
+cat lorem/at.txt | grep -o "et" | wc -l
+
+# Count the number of times the string et appears in at.txt located at lorem
+cat lorem/at.txt | grep -ow "et" | wc -l
+
+# Count the number of times the string et appears in every file located at lorem-copy
+grep -ow "et" lorem-copy/* | wc -l
+
+
+#########
+# BONUS #
+#########
+
+# Load your name in the variable name
+export name=Raul
+
+# Print that variable
+echo $name
+
+# Create a folder named after the variable name
+mkdir $name
+
+# Delete that folder
+rmdir $name
+
+# For every folder in lorem print the total number of characters of every file name. Try using a for loop to show every file name
+
+# Show the system processes being executed (show them hierarchically):
+ps -aef --forest
+ps -ejH
+
+# Show processor info on screen
+lscpu
+
+# Create 3 new alias and make them available everytime you login your session
+vi ~/.bashrc
+alias alias_1='echo Hola'
+alias alias_2='ls -l'
+alias alias_3='ls -lhart'
+
+# Compress lorem and lorem-copy folders in a file named lorem-compressed.tar.gz
+tar -czvf lorem-compressed.tar.gz lorem lorem-copy
+
+# Uncompress lorem-compressed.tar.gz in lorem-uncompressed folder
+mkdir ./lorem-uncompressed; tar -xzvf lorem-compressed.tar.gz -C ./lorem-uncompressed
+
