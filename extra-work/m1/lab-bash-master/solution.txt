@@ -1,13 +1,13 @@
 print ("Hello world")
 mkdir new_dir
 rm -r new_dir
-cp sed.txt /lorem-copy
-cp at.txt /lorem-copy; cp lorem.txt /lorem-copy
+cp sed.txt sed_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+cp at.txt at_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy; cp lorem.txt lorem_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
 cd /lorem
 cat sed.txt
 cat at.txt
 cat lorem.txt
-cd /lorem-copy
+cd ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
 head -n 3 sed.txt
 tail -n 3 sed.txt
 nano sed.txt
@@ -15,9 +15,9 @@ tail -n 3 sed.txt
 sed 's/et/ET/' at.txt
 whoami
 pwd
-cd /lorem; ls *.txt
+cd ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem; ls *.txt
 wc -l sed.txt
-ls /lab-bash-master/lorem* | wc -l
-cd /lorem
-grep -o -i et at.txt | wc -l 
-
+ls ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master lorem* | wc -l
+grep -oi et at.txt | wc -l 
+grep -oiw et at.txt | wc -l
+cd ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy; grep -rohwi et . | wc -w
