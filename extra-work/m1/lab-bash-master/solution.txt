@@ -1,0 +1,6 @@
+echo Hello World
+mkdir new_dir
+rm -rf new_dir
+cp -r lorem lab-bash-master
+cp -r sed.txt /home/pablo/Ironhack/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+
