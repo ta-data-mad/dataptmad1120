@@ -1,0 +1,18 @@
+touch solution
+echo "Hello World"
+mkdir new_dir
+rm -rf new_dir
+cp lorem/sed.txt lorem-copy/.
+cp lorem/at.txt lorem-copy/.; cp lorem/lorem.txt lorem-copy/.
+cd lorem-copy
+head sed.txt -n 3
+tail sed.txt -n 3
+nano sed.txt y añado Homo homini lupus.
+tail sed.txt -n 
+-> no sé cambiar et por ET en todo un texto. Lo he buscado en Google para encontrar alguna manera y he probado algún comando con scripts de bash pero no me ha funcionado. 
+whoami
+pwd
+ls lorem/.
+wc -l sed.txt
+ls -d lorem*
+grep -c -n "et" lorem/at.txt
