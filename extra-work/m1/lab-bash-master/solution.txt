@@ -76,6 +76,10 @@ mkdir $name
 rmdir $name
 
 # For every folder in lorem print the total number of characters of every file name. Try using a for loop to show every file name
+for file in lorem/*; 
+do 
+wc -m $file | awk '{print $1}'; 
+done;
 
 # Show the system processes being executed (show them hierarchically):
 ps -aef --forest
