@@ -1,0 +1,37 @@
+echo Hello World
+mkdir new_dir
+rmdir new_dir
+cp sed.txt ../lorem-copy
+cat at.txt lorem.txt ../lorem-copy
+cat sed.txt
+cat at.txt lorem.txt
+head -3 sed.txt
+tail -3 sed.txt
+echo Homo homini lupus. >>sed.txt
+tail -3 sed.txt
+sed 's/et/ET/g' at.txt
+who
+pwd
+ls *.txt
+wc -l sed.txt
+find . -type f -name "lorem*" 
+
+
+Bash Files
+nano list_files.sh
+bash list_files.sh
+
+Bonus
+name=Clara
+echo $name
+mkdir $name
+rmdir $name
+for i in lorem ; do ls $i ; done
+for i in *.text ; do wc -m $i ; done
+for i in *.text ; do 
+
+alias ll="ls-alh"
+alias data="cd/Desktop/Bootcamp/dataptmad1120"
+
+tar -czvf lorem-compressed.tar.gz lorem lorem-copy
+tar -xf lorem-compressed.tar.gz -C/Users/clara/Desktop/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-uncompressed
