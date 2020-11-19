@@ -2,25 +2,31 @@
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ls
 exercices  inputs  lorem  lorem-copy  outputs  README.md  solution.txt
 
+
 **Print Hello World in console.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ echo Hello World
 Hello World
+
 
 **Create a new folder named new_dir.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ mkdir new_dir
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ls
 exercices  inputs  lorem  lorem-copy  new_dir  outputs  README.md  solution.txt
 
+
 **Delete new_dir folder.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ rm -r new_dir
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ls
 exercices  inputs  lorem  lorem-copy  outputs  README.md  solution.txt
 
+
 **Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ cp lorem/sed.txt lorem-copy/.
 
+
 **Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
 ((base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ cp lorem/at.txt lorem-copy/.; cp lorem/lorem.txt lorem-copy/.
+
 
 **Locate at lorem folder and show sed.txt content.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
@@ -34,6 +40,7 @@ sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliqu
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
 vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
 
 **Locate at lorem folder and show at.txt and lorem.txt content.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ more at.txt
@@ -53,6 +60,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+
 **Locate at lorem-copy folder and show the first three lines of sed.txt.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cd ..
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy
@@ -61,20 +69,24 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
 
+
 **Locate at lorem-copy folder and show the last three lines of sed.txt.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ tail sed.txt -n3
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
 vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
+
 **Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
 viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ nano sed.txt
+
 
 **Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
 base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ tail sed.txt -n3
 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
 vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 Homo homini lupus.
+
 
 **Change every et to ET in at.txt located at lorem-copy (tip: use sed).
 base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ sed -i 's/ et / ET /g' at.txt
@@ -94,6 +106,7 @@ Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saep
 ut ET voluptates repudiandae sint ET molestiae non recusandae. 
 Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
 alias consequatur aut perferendis doloribus asperiores repellat
+
 
 **Find the active user of the system.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ who
@@ -128,11 +141,16 @@ at.txt  lorem.txt  sed.txt
 
 
 **Count the number of times et appears in at.txt located at lorem.
-(base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ grep -o -i  et  at.txt | wc -l
-11
+(base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ grep -o  et  at.txt | wc -l
+10
 
 
 **Count the number of times the string et appears in at.txt located at lorem.
 (base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ grep -o -i ' et '  at.txt | wc -l
 8
+
+
+**Count the number of times the string et appears in every file located at lorem-copy.
+(base) viki@viki-Lenovo-Z50-70:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ grep -o ' et '  ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/* | wc -l
+3
 
