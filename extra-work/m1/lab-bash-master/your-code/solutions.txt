@@ -178,3 +178,36 @@ Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saep
 ut ET voluptates repudiandae sint ET molestiae non recusandae. 
 Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
 alias consequatur aut perferendis doloribus asperiores repellat(ironhack_env) MacBook-Air-de-Sara:lorem-copy sarahr$ 
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	inputs		lorem		outputs
+exercices	list_files.sh	lorem-copy	your-code
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ #!/bin/bash          
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ name="Sara"
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ print(name)
+-bash: syntax error near unexpected token `name'
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ git status
+En la rama lab-bash-master
+Tu rama está actualizada con 'origin/lab-bash-master'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ #!/bin/bash          
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$             STR="Hello World!"
+-bash: !": event not found
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$             echo $name
+Sara
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ echo $name
+Sara
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ echo $STR
+
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ mkdir mkdir $name
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	exercices	list_files.sh	lorem-copy	outputs
+Sara		inputs		lorem		mkdir		your-code
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ rm -r mkdir
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	exercices	list_files.sh	lorem-copy	your-code
+Sara		inputs		lorem		outputs
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ rm -r Sara
+(ironhack_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	inputs		lorem		outputs
+exercices	list_files.sh	lorem-copy	your-code
