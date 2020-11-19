@@ -1,9 +1,10 @@
-print ("Hello world")
+nano hello.sh
+bash hello.sh
 mkdir new_dir
 rm -r new_dir
 cp sed.txt sed_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
 cp at.txt at_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy; cp lorem.txt lorem_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
-cd /lorem
+cd lorem/
 cat sed.txt
 cat at.txt
 cat lorem.txt
@@ -21,3 +22,22 @@ ls ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master lorem* | wc -l
 grep -oi et at.txt | wc -l 
 grep -oiw et at.txt | wc -l
 cd ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy; grep -rohwi et . | wc -w
+
+BONUS
+name=Jie
+echo $name
+mkdir $name
+rm -r Jie
+for files in *; do echo "$files"; done
+for files in *; do echo "$files" | wc -m; done
+for files in *; do echo "$(basename $files) has $(wc -m < $files) characters length"; done
+htop
+ps -a
+/proc/cpuinfo | grep processor
+nano ~/.bashrc
+alias bootcamp="cd home/jie/Bootcamp/dataptmad1120"
+alias gs="git status"
+alias branch="git branch"
+tar -czf lorem-compressed.tar.gz lorem/ lorem-copy/
+mkdir lorem-uncompressed
+tar -xzvf lorem-compressed.tar.gz -C lorem-uncompressed/
