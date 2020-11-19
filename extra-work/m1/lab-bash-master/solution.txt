@@ -1,0 +1,201 @@
+Print Hello World in console.
+
+(base) usuario@alvaro-laptop:~$ echo 'Hello'
+Hello
+
+
+Create a new folder named new_dir.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ mkdir new_dir
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ll
+total 28K
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 exercices
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 inputs
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 lorem
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 lorem-copy
+drwxrwxr-x 2 usuario usuario 4,0K nov 18 11:28 new_dir
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 outputs
+-rw-rw-r-- 1 usuario usuario 3,3K nov 14 10:01 README.md
+-rw-rw-r-- 1 usuario usuario    0 nov 18 11:17 solution.txt
+
+
+Delete new_dir folder.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ rm -rf new_dir/
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ll
+total 24K
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 exercices
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 inputs
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 lorem
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 lorem-copy
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 outputs
+-rw-rw-r-- 1 usuario usuario 3,3K nov 14 10:01 README.md
+-rw-rw-r-- 1 usuario usuario    0 nov 18 11:17 solution.txt
+
+
+Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cp sed.txt /home/usuario/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/.
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy/
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ la
+total 12K
+drwxrwxr-x 2 usuario usuario 4,0K nov 18 11:56 .
+drwxrwxr-x 7 usuario usuario 4,0K nov 18 11:55 ..
+-rw-rw-r-- 1 usuario usuario    0 nov 14 10:01 .gitkeep
+-rw-rw-r-- 1 usuario usuario  873 nov 18 11:56 sed.txt
+
+
+
+Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cp at.txt /home/usuario/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/.; cp lorem.txt /home/usuario/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy/
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ la
+
+
+drwxrwxr-x 2 usuario usuario 4,0K nov 18 12:08 .
+drwxrwxr-x 7 usuario usuario 4,0K nov 18 11:55 ..
+-rw-rw-r-- 1 usuario usuario  852 nov 18 12:08 at.txt
+-rw-rw-r-- 1 usuario usuario    0 nov 14 10:01 .gitkeep
+-rw-rw-r-- 1 usuario usuario  852 nov 18 12:08 lorem.txt
+-rw-rw-r-- 1 usuario usuario  873 nov 18 11:56 sed.txt
+
+
+Locate at lorem folder and show sed.txt content.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat at.txt 
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat lorem.txt 
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+
+
+
+Locate at lorem-copy folder and show the last three lines of sed.txt.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ head sed.txt -n 3
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+
+
+
+Locate at lorem-copy folder and show the last three lines of sed.txt.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ tail sed.txt -n 3
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+
+Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus.
+
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ tail sed.txt -n 2
+
+Homo homini lupus.
+
+
+Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ cat at.txt|sed 's/et/ET/g'
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+
+
+Find the active user of the system.
+
+(base) usuario@alvaro-laptop:~$ hostname
+alvaro-laptop
+
+
+Find out where are you located within the system.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ pwd
+/home/usuario/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master
+
+
+List all .txt files located at lorem.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ll
+total 12K
+-rw-rw-r-- 1 usuario usuario 852 nov 14 10:01 at.txt
+-rw-rw-r-- 1 usuario usuario 852 nov 18 12:05 lorem.txt
+-rw-rw-r-- 1 usuario usuario 873 nov 14 10:01 sed.txt
+
+
+
+Count the number of lines in sed.txt located at lorem.
+ 
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ wc -l sed.txt 
+8 sed.txt
+
+Count the number of files which name starts with lorem located at the whole lab directory.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ls -dq *lorem* | wc -l
+2
+
+
+Count the number of times et appears in at.txt located at lorem.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ grep -c 'et' at.txt
+7
+
+Count the number of times the string et appears in at.txt located at lorem.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ grep -o "et" at.txt | wc -l
+10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
