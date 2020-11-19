@@ -176,6 +176,92 @@ Count the number of times the string et appears in at.txt located at lorem.
 10
 
 
+Count the number of times the string et appears in every file located at lorem-copy.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ for f in *;do echo $(grep -o "et" $f| wc -l); done 
+10
+10
+4
+
+
+***Bash files***
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ nano list_files.sh
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ bash list_files.sh 
+exercices  inputs  list_files.sh  lorem  lorem-copy  outputs  README.md  solution.txt
+
+
+
+***Bonus***
+
+Load your name in the variable name.
+Print that variable.
+
+P(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ name=Álvaro
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ echo $name
+Álvaro
+
+
+
+Create a folder named after the variable name.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ mkdir $name
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ll
+total 44K
+drwxrwxr-x 2 usuario usuario 4,0K nov 19 11:55 Álvaro
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 exercices
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 inputs
+-rw-rw-r-- 1 usuario usuario   15 nov 19 11:50 list_files.sh
+drwxrwxr-x 2 usuario usuario 4,0K nov 18 13:07 lorem
+drwxrwxr-x 2 usuario usuario 4,0K nov 19 11:50 lorem-copy
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 outputs
+-rw-rw-r-- 1 usuario usuario 3,3K nov 14 10:01 README.md
+-rw-rw-r-- 1 usuario usuario 8,8K nov 19 11:46 solution.txt
+
+
+Delete that folder.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ rm -rf $name
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master$ ll
+total 40K
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 exercices
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 inputs
+-rw-rw-r-- 1 usuario usuario   15 nov 19 11:50 list_files.sh
+drwxrwxr-x 2 usuario usuario 4,0K nov 18 13:07 lorem
+drwxrwxr-x 2 usuario usuario 4,0K nov 19 11:50 lorem-copy
+drwxrwxr-x 2 usuario usuario 4,0K nov 14 10:01 outputs
+-rw-rw-r-- 1 usuario usuario 3,3K nov 14 10:01 README.md
+-rw-rw-r-- 1 usuario usuario 8,8K nov 19 11:46 solution.txt
+
+
+
+For every folder in lorem print the total number of characters of every file name. Try using a for loop to show every file name.
+
+i.Print every file.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for f in *;do echo $f;done
+at.txt
+lorem.txt
+sed.txt
+
+
+
+ii.Print the number of characters of every file name.
+
+(base) usuario@alvaro-laptop:~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for f in *;do echo "$(wc -w $f) words";done
+120 at.txt words
+120 lorem.txt words
+129 sed.txt words
+
+
+
+
+
+
+
+
+
+
 
 
 
