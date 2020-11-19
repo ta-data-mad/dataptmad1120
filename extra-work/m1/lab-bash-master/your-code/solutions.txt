@@ -1,0 +1,169 @@
+MacBook-Air-de-Sara:Ironhack sarahr$ ls
+Untitled.ipynb	dataptmad1120
+MacBook-Air-de-Sara:Ironhack sarahr$ cd dataptmad1120/
+MacBook-Air-de-Sara:dataptmad1120 sarahr$ ls
+LICENSE		README.md	extra-work	module-1	module-2	module-3
+MacBook-Air-de-Sara:dataptmad1120 sarahr$ cd extra-work
+MacBook-Air-de-Sara:extra-work sarahr$ ls
+m1	m2	m3
+MacBook-Air-de-Sara:extra-work sarahr$ cd m1
+MacBook-Air-de-Sara:m1 sarahr$ ls
+lab-advanced-web-scraping	lab-generators-functions	pandas-project
+lab-api-scavenger		lab-import-export		pipelines-project
+lab-bash-master			lab-job-board-scraping		python-project
+lab-data-vikings		lab-parsing-api			web-project
+lab-errhand-listcomp		lab-rss
+lab-functions			lab-web-scraping
+MacBook-Air-de-Sara:m1 sarahr$ cd lab-bash-master/
+MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	exercices	inputs		lorem		lorem-copy	outputs
+MacBook-Air-de-Sara:lab-bash-master sarahr$ touch solution.txt
+MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	inputs		lorem-copy	solution.txt
+exercices	lorem		outputs
+MacBook-Air-de-Sara:lab-bash-master sarahr$ git rm solution.txt
+fatal: ruta especificada 'solution.txt' no concordó con ninguna carpeta
+MacBook-Air-de-Sara:lab-bash-master sarahr$ git rm 
+fatal: no eliminando 'extra-work/m1/lab-bash-master/' de manera recursiva sin -r
+MacBook-Air-de-Sara:lab-bash-master sarahr$ git -r solution.txt
+opción -r desconocida
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+MacBook-Air-de-Sara:lab-bash-master sarahr$ cd ..
+MacBook-Air-de-Sara:m1 sarahr$ cd ..
+MacBook-Air-de-Sara:extra-work sarahr$ cd ..
+MacBook-Air-de-Sara:dataptmad1120 sarahr$ cd ..
+MacBook-Air-de-Sara:Ironhack sarahr$ python
+
+WARNING: Python 2.7 is not recommended. 
+This version is included in macOS for compatibility with legacy software. 
+Future versions of macOS will not include Python 2.7. 
+Instead, it is recommended that you transition to using 'python3' from within Terminal.
+
+Python 2.7.16 (default, Jun  5 2020, 22:59:21) 
+[GCC 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.29.20) (-macos10.15-objc- on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello world")
+Hello world
+>>> ^D
+MacBook-Air-de-Sara:Ironhack sarahr$ touch solution.txt
+MacBook-Air-de-Sara:Ironhack sarahr$ ls
+Untitled.ipynb	dataptmad1120	solution.txt
+MacBook-Air-de-Sara:Ironhack sarahr$ cd dataptmad1120/
+MacBook-Air-de-Sara:dataptmad1120 sarahr$ ls
+LICENSE		README.md	extra-work	module-1	module-2	module-3
+MacBook-Air-de-Sara:dataptmad1120 sarahr$ cd extra-work/
+MacBook-Air-de-Sara:extra-work sarahr$ ls
+m1	m2	m3
+MacBook-Air-de-Sara:extra-work sarahr$ cd m1
+MacBook-Air-de-Sara:m1 sarahr$ 
+Display all 1551 possibilities? (y or n)
+MacBook-Air-de-Sara:m1 sarahr$ ls
+lab-advanced-web-scraping	lab-generators-functions	pandas-project
+lab-api-scavenger		lab-import-export		pipelines-project
+lab-bash-master			lab-job-board-scraping		python-project
+lab-data-vikings		lab-parsing-api			web-project
+lab-errhand-listcomp		lab-rss
+lab-functions			lab-web-scraping
+MacBook-Air-de-Sara:m1 sarahr$ cd lab-bash-master/
+MacBook-Air-de-Sara:lab-bash-master sarahr$ python
+
+WARNING: Python 2.7 is not recommended. 
+This version is included in macOS for compatibility with legacy software. 
+Future versions of macOS will not include Python 2.7. 
+Instead, it is recommended that you transition to using 'python3' from within Terminal.
+
+Python 2.7.16 (default, Jun  5 2020, 22:59:21) 
+[GCC 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.29.20) (-macos10.15-objc- on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello world")
+Hello world
+>>> ^D
+MacBook-Air-de-Sara:lab-bash-master sarahr$ mkdir new_dir
+MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	inputs		lorem-copy	outputs
+exercices	lorem		new_dir		solution.txt
+MacBook-Air-de-Sara:lab-bash-master sarahr$ rm -r new_dir
+MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	inputs		lorem-copy	solution.txt
+exercices	lorem		outputs
+MacBook-Air-de-Sara:lorem sarahr$ pwd
+/Users/sarahr/Ironhack/dataptmad1120/extra-work/m1/lab-bash-master/lorem
+MacBook-Air-de-Sara:lorem sarahr$ cp sed.txt /Users/sarahr/Ironhack/dataptmad1120/extra-work/m1/lab-bash-master/lorem
+cp: /Users/sarahr/Ironhack/dataptmad1120/extra-work/m1/lab-bash-master/lorem/sed.txt and sed.txt are identical (not copied).
+MacBook-Air-de-Sara:lorem sarahr$ cp sed.txt /Users/sarahr/Ironhack/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+MacBook-Air-de-Sara:lorem sarahr$ cd ..
+MacBook-Air-de-Sara:lab-bash-master sarahr$ cd lorem-copy
+MacBook-Air-de-Sara:lorem-copy sarahr$ ls
+sed.txt
+MacBook-Air-de-Sara:lorem-copy sarahr$ cd ..
+MacBook-Air-de-Sara:lab-bash-master sarahr$ cd lorem
+MacBook-Air-de-Sara:lorem sarahr$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?MacBook-Air-de-Sara:lorem sarahr$ 
+MacBook-Air-de-Sara:lorem sarahr$ cat at.txt sed.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?MacBook-Air-de-Sara:lorem sarahr$ 
+MacBook-Air-de-Sara:lorem sarahr$ cd ..
+MacBook-Air-de-Sara:lab-bash-master sarahr$ cd lorem-copy
+MacBook-Air-de-Sara:lorem-copy sarahr$ head -n 3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+MacBook-Air-de-Sara:lorem-copy sarahr$ tail -n 3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?MacBook-Air-de-Sara:lorem-copy sarahr$ 
+MacBook-Air-de-Sara:lorem-copy sarahr$ nano sed.txt
+MacBook-Air-de-Sara:lorem-copy sarahr$ tail -n 3 sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Homo homini lupus.
+MacBook-Air-de-Sara:lorem-copy sarahr$ whoami
+sarahr
+MacBook-Air-de-Sara:lorem-copy sarahr$ id -un
+sarahr
+MacBook-Air-de-Sara:lorem-copy sarahr$ 
+MacBook-Air-de-Sara:lorem-copy sarahr$ pwd
+/Users/sarahr/Ironhack/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+MacBook-Air-de-Sara:lorem-copy sarahr$ .
+MacBook-Air-de-Sara:lorem sarahr$ ls *.txt
+at.txt		lorem.txt	sed.txt
+MacBook-Air-de-Sara:lorem sarahr$ wc -l sed.txt
+       8 sed.txt
+MacBook-Air-de-Sara:lab-bash-master sarahr$ ls -dq *lorem*
+lorem		lorem-copy
+MacBook-Air-de-Sara:lab-bash-master sarahr$ ls -dq *lorem* | wc -l
+       2
+(ironhack_env) MacBook-Air-de-Sara:lorem sarahr$ grep -c "et" at.txt
+7
+(ironhack_env) MacBook-Air-de-Sara:lorem sarahr$ grep -c "et" at.txt
+7.
+(ironhack_env) MacBook-Air-de-Sara:lorem-copy sarahr$ grep -r "et" . | wc -l
+       3
