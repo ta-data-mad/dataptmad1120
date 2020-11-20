@@ -14,3 +14,24 @@ ls -lh /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/
 #Locate at lorem folder and show sed.txt content.
 cat ./lorem/sed.txt
 #Locate at lorem folder and show at.txt and lorem.txt content.
+cat ./lorem/sed.txt ; cat ./lorem/at.txt
+#Locate at lorem-copy folder and show the first three lines of sed.txt
+head -n 3 ./lorem-copy/sed.txt
+#Locate at lorem-copy folder and show the last three lines of sed.txt
+tail -n 3 ./lorem-copy/sed.txt
+#Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+echo " Homo homini lupus" >> ./lorem-copy/sed.txt
+#Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+tail -n 3 ./lorem-copy/sed.txt
+#Change every et to ET in at.txt located at lorem-copy (tip: use sed)
+sed 's/et/ET/' /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/at.txt
+#Find the active user of the system.
+echo $USER or whoami
+#Find out where are you located within the system
+pwd
+#List all .txt files located at lorem
+find /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/ -type f -name "*.txt"
+#Count the number of lines in sed.txt located at lorem
+wc -l /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/sed.txt
+
+
