@@ -16,3 +16,30 @@ ls lorem/.
 wc -l sed.txt
 ls -d lorem*
 grep -c -n "et" lorem/at.txt
+grep -c -n "et" lorem/*
+nano list_files.sh y escribimos dentro ls
+bash list_files.sh
+
+BONUS
+
+name="emily"
+echo $name
+mkdir $name
+rm -rf $name
+
+i. ls lorem
+ii. for f in lorem/*; do wc -c < $f; done
+iii. for f in lorem/*; do echo "$(basename $f) has $(wc -c < $f) characters lenght"; done
+
+i. htop o ps -f -u emily
+
+En la raíz: nano .bashrc y escribo los siguientes alias nuevos:
+alias ..='cd ..'
+alias la='ls -la'
+alias emily='touch emily.txt'
+cierro y vuelvo a abrir la terminal para comprobar que funcionan los alias.
+
+tar -zcvf lorem-compressed.tar.gz lorem 
+parece que cuando hago lo mismo para lorem-copy sustituye a lorem dentro de lorem-compressed y no doy con la forma de que se añadan ambos directorios a la vez.
+
+He probado varios comandos para descomprimir y tampoco he dado con ello. 
