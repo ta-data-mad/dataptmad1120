@@ -1,1 +1,16 @@
 #In this file, I  will write every command that will be used during this lab.
+#Print Hello World in console.
+echo "Hello World"
+#Create a new folder named new_dir
+mkdir new_dir
+#Delete new_dir folder
+rm -rf new_dir
+#Make a copy of sed.txt (located in the lorem folder) to lorem-copy
+cp /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/sed.txt /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+#Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;)
+cp -r /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+#Extra: To check if the file was added
+ls -lh /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+#Locate at lorem folder and show sed.txt content.
+cat ./lorem/sed.txt
+#Locate at lorem folder and show at.txt and lorem.txt content.
