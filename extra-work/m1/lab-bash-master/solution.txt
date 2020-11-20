@@ -33,5 +33,11 @@ pwd
 find /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/ -type f -name "*.txt"
 #Count the number of lines in sed.txt located at lorem
 wc -l /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/sed.txt
-
-
+#Count the number of files which name starts with lorem located at the whole lab directory
+ls /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master | grep 'lorem' | wc -l
+#Count the number of times et appears in at.txt located at lorem
+grep -wc "et" /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/at.txt
+#Count the number of times the string et appears in at.txt located at lorem
+grep -o -i et /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem/at.txt | wc -l
+#Count the number of times the string et appears in every file located at lorem-copy
+grep -c -R 'et' /Users/manuelaquino/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/
