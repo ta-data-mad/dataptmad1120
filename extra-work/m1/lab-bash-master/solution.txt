@@ -1,0 +1,51 @@
+printf "hello world"
+
+mkdir new_dir
+
+rm -r new_dir
+
+cd lorem
+sudo cp sed.txt /lorem-copy
+
+sudo cp at.txt /lorem-copy ; sudo cp lorem.txt /lorem-copy
+
+cat sed.txt
+
+cat at.txt ; cat lorem.txt
+
+cd ..
+cd lorem-copy
+head -n 3 sed.txt
+
+tail -n 3 sed.txt
+
+nano sed.txt
+(edit text)
+
+tail -n 3 sed.txt
+
+sed -i 's/et/ET/g' at.txt
+
+w
+
+pwd
+
+cd..
+cd lorem
+ls -d *txt
+
+wc -l sed.txt
+
+cd ..
+ls -dq *lorem* | wc -l
+
+cd lorem
+grep et -o at.txt | wc-l
+
+grep -c "et" at.txt
+
+cd ..
+cd lorem-copy
+grep -0 "et" *.txt | wc -l
+
+
