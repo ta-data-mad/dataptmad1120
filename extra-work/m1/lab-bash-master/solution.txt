@@ -1,0 +1,120 @@
+# Print Hello World in console:
+
+(base) alematiasmartin@MacBook-Pro-de-Alejandra ~ % echo "Hello World" 
+Hello World
+
+
+# Create a new folder named new_dir:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master % mkdir new_dir
+
+# Delete new_dir folder: 
+(base) alematiasmartin@MacBook-P(ro-de-Alejandra lab-bash-master % rm -r new_dir
+
+
+# Make a copy of sed.txt (located in the lorem folder) to lorem-copy:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % cp sed.txt /Users/alematiasmartin/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/
+
+# Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;):
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % cp at.txt /Users/alematiasmartin/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/; cp lorem.txt /Users/alematiasmartin/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/
+
+# Locate at lorem folder and show sed.txt content:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+# Locate at lorem folder and show at.txt and lorem.txt content:           
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % cat at.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+
+%(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % cat lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     
+
+# Locate at lorem-copy folder and show the first three lines of sed.txt:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master % cat lorem-copy/sed.txt | head -n3
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+# Locate at lorem-copy folder and show the last three lines of sed.txt:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master %  cat lorem-copy/sed.txt | tail -n3
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+# Add Homo homini lupus. at the end of sed.txt located at lorem-copy:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem-copy % nano sed.txt
+
+# Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus.
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master % cat lorem-copy/sed.txt | tail -n3
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Homo homini lupus.
+
+# Change every et to ET in at.txt located at lorem-copy (tip: use sed):
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem-copy % cat at.txt|sed 's/et/ET/g'
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+
+# Find the active user of the system:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master % whoami
+alematiasmartin
+
+# Find out where are you located within the system:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem-copy % pwd
+/Users/alematiasmartin/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy  
+
+# List all .txt files located at lorem:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master % cd lorem
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % ls -l
+total 24
+-rw-r--r--  1 alematiasmartin  staff  852 17 nov 20:00 at.txt
+-rw-r--r--  1 alematiasmartin  staff  448 17 nov 20:00 lorem.txt
+-rw-r--r--  1 alematiasmartin  staff  873 17 nov 20:00 sed.txt
+
+# Count the number of lines in sed.txt located at lorem: 
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % wc -l sed.txt
+       8 sed.txt 
+
+# Count the number of files which name starts with lorem located at the whole lab directory:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master %ls -dq *lorem* | wc -l
+       2
+
+# Count the number of times et appears in at.txt located at lorem:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % grep -c 'et' at.txt
+      7
+
+# Count the number of times the string et appears in at.txt located at lorem:
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lorem % grep -o "et" at.txt | wc -l
+
+      10 
+
+# Count the number of times the string et appears in every file located at lorem-copy.
+(base) alematiasmartin@MacBook-Pro-de-Alejandra lab-bash-master % grep -ow "et" lorem-copy/* | wc -l
+      11 
