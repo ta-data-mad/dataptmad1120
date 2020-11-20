@@ -4,11 +4,11 @@ mkdir new_dir
 rm -r new_dir
 cp sed.txt sed_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
 cp at.txt at_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy; cp lorem.txt lorem_copy.txt ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
-cd lorem/
+cd lorem
 cat sed.txt
 cat at.txt
 cat lorem.txt
-cd ~/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+cd ..; cd lorem-copy
 head -n 3 sed.txt
 tail -n 3 sed.txt
 nano sed.txt
