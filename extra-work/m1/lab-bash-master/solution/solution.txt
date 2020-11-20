@@ -1,6 +1,3 @@
-(base) elo@elo-VirtualBox:~$ ls
-Bootcamp  Documents  miniconda3  Pictures  snap       Videos
-Desktop   Downloads  Music       Public    Templates
 (base) elo@elo-VirtualBox:~$ cd Bootcamp/
 (base) elo@elo-VirtualBox:~/Bootcamp$ cd git_work/
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work$ cd dataptmad1120/
@@ -21,31 +18,30 @@ exercices  inputs  lorem  lorem-copy  outputs  README.md  solution
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ git status
 On branch lab-bash-master
 nothing to commit, working tree clean
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ echo Hello World
 Hello World
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ mkdir new_dir
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ la
 exercices  inputs  lorem  lorem-copy  new_dir  outputs  README.md  solution
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ rm -rf new_dir
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ls
 at.txt  lorem.txt  sed.txt
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ ls
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ ..
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cp sed.txt ~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/.
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cp -r
-cp: missing file operand
-Try 'cp --help' for more information.
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ man cp
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for copyfiles in *;do cp $copyfiles; done
-cp: missing destination file operand after 'at.txt'
-Try 'cp --help' for more information.
-cp: missing destination file operand after 'lorem.txt'
-Try 'cp --help' for more information.
-cp: missing destination file operand after 'sed.txt'
-Try 'cp --help' for more information.
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for copyfiles in *;do cp $copyfiles ~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy/.; done
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy/
@@ -60,7 +56,10 @@ Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, ad
 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
-vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat at.txt
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat at.txt
 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
 deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
 provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
@@ -70,24 +69,37 @@ maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repell
 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
 ut et voluptates repudiandae sint et molestiae non recusandae. 
 Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
-alias consequatur aut perferendis doloribus asperiores repellat(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat lorem.txt
+alias consequatur aut perferendis doloribus asperiores repellat
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat lorem.txt
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ head sed.txt -n 3
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
 totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ tail sed.txt -n 3
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
-vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ nano sed.txt
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ nano sed.txt
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ tail sed.txt -n 3
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
 vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Homo homini lupus.
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ sed 's/et/ET/g' at.txt
 At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
 deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
@@ -98,35 +110,38 @@ maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repell
 Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
 ut ET voluptates repudiandae sint ET molestiae non recusandae. 
 Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
-alias consequatur aut perferendis doloribus asperiores repellat(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ whoami
+alias consequatur aut perferendis doloribus asperiores repellat
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ whoami
 elo
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ pwd
 /home/elo/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ ..
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ man ls
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ls *.{txt}
-ls: cannot access '*.{txt}': No such file or directory
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ls *.txt
 at.txt  lorem.txt  sed.txt
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ man wc
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ 
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ wc sed.txt
-  8 129 873 sed.txt
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ wc -l sed.txt
 8 sed.txt
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
-(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ la lorem*
-lorem:
-at.txt  lorem.txt  sed.txt
 
-lorem-copy:
-at.txt  .gitkeep  lorem.txt  sed.txt
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ find . -name 'lorem*'
 ./lorem-copy
 ./lorem-copy/lorem.txt
 ./lorem
 ./lorem/lorem.txt
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ grep et at.txt
 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
@@ -136,6 +151,8 @@ Et harum quidem rerum facilis est et expedita distinctio.
 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
 ut et voluptates repudiandae sint et molestiae non recusandae. 
 Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+
+
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy
 (base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ grep et *
@@ -150,3 +167,136 @@ lorem.txt:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 sed.txt:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
 sed.txt:sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ echo BONUS
+BONUS
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ name="eloy"
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ echo $name
+eloy
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ mkdir $name
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ ls
+eloy  list_files.sh  solution  solution.txt
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ rm -rf $name
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ ls
+list_files.sh  solution  solution.txt
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/solution$ ..
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for f in *; do echo  $f; done
+at.txt
+lorem.txt
+sed.txt
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for f in *; do echo $(wc -c < $f); done
+852
+448
+873
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ for f in *; do echo $f has $(wc -c < $f) characters lenght; done
+at.txt has 852 characters lenght
+lorem.txt has 448 characters lenght
+sed.txt has 873 characters lenght
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ htop
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ps
+    PID TTY          TIME CMD
+   1809 pts/0    00:00:00 bash
+   2379 pts/0    00:00:00 ps
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4308U CPU @ 2.80GHz
+stepping	: 1
+cpu MHz		: 2800.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm invpcid_single pti fsgsbase avx2 invpcid md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 5600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ cd /home
+(base) elo@elo-VirtualBox:/home$ cd elo
+(base) elo@elo-VirtualBox:~$ la
+.bash_history  Documents   .mozilla                   Templates
+.bash_logout   Downloads   Music                      .thunderbird
+.bashrc        .gitconfig  Pictures                   .vboxclient-clipboard.pid
+Bootcamp       .gnupg      .profile                   .vboxclient-display-svga-x11.pid
+.cache         .ipython    Public                     .vboxclient-draganddrop.pid
+.conda         .jupyter    snap                       .vboxclient-seamless.pid
+.config        .local      .ssh                       Videos
+Desktop        miniconda3  .sudo_as_admin_successful
+(base) elo@elo-VirtualBox:~$ nano .bashrc
+(base) elo@elo-VirtualBox:~$ 
+(base) elo@elo-VirtualBox:~$ source .bashrc
+(base) elo@elo-VirtualBox:~$ ..
+(base) elo@elo-VirtualBox:/home$ gitrepo
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120$ ls
+extra-work  LICENSE  module-1  module-2  module-3  README.md
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120$ cd extra-work/
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work$ cd m1
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1$ cd lab-bash-master/
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ ls
+exercices  inputs  lorem  lorem-copy  outputs  README.md  solution
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ls
+at.txt  lorem.txt  sed.txt
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem$ ..
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-copy/
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy$ lsat.txt  lorem.txt  sed.txt
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ tar -czvf lorem-compressed.tar.gz lorem lorem-copy
+lorem/
+lorem/at.txt
+lorem/sed.txt
+lorem/lorem.txt
+lorem-copy/
+lorem-copy/.gitkeep
+lorem-copy/at.txt
+lorem-copy/sed.txt
+lorem-copy/lorem.txt
+
+
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ mkdir lorem-uncompressed folder
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cp lorem-compressed.tar.gz lorem-uncompressed  
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master$ cd lorem-uncompressed/
+(base) elo@elo-VirtualBox:~/Bootcamp/git_work/dataptmad1120/extra-work/m1/lab-bash-master/lorem-uncompressed$ tar -xvf lorem-compressed.tar.gz 
+lorem/
+lorem/at.txt
+lorem/sed.txt
+lorem/lorem.txt
+lorem-copy/
+lorem-copy/.gitkeep
+lorem-copy/at.txt
+lorem-copy/sed.txt
