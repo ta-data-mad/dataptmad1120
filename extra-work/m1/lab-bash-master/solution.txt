@@ -1,0 +1,6 @@
+filename='lorem/sed.txt'
+n=1
+while read linea; do
+echo $n
+n=$((n+1))
+done < $filename

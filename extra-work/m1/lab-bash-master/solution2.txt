@@ -1,0 +1,9 @@
+dir=./
+for entry in "$dir"/* 
+do
+echo "$entry"
+if [${entry%.*}="lorem"] 
+then
+echo "$entry"
+fi
+done 
