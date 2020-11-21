@@ -1,8 +1,8 @@
-Print Hello World in console.
+Print Hello World in console. --> echo "Hello World"
 
-Create a new folder named new_dir.
+Create a new folder named new_dir. --> mkdir new_dir
 
-Delete new_dir folder.
+Delete new_dir folder. 
 
 Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
 
