@@ -112,3 +112,5 @@ Count the number of times the string et appears in every file located at lorem-c
 -- grep -roh et | wc -w
 
 7
+
+Finished
