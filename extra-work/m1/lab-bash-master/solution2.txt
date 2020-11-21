@@ -1,9 +1,8 @@
-dir=./
-for entry in "$dir"/* 
-do
-echo "$entry"
-if [${entry%.*}="lorem"] 
-then
-echo "$entry"
-fi
-done 
+echo 'files finishing in .txt'
+find . -type f -name '*.txt'
+find . -type f -name '*.txt'| wc -l
+
+echo 'files starting with lorem'
+find . -type f -name 'lorem*'
+find . -type f  -name 'lorem*' | wc -l
+ 

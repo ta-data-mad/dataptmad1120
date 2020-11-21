@@ -1,0 +1,2 @@
+echo "et appears $(grep -o -i "\<et\>" lorem/at.txt | wc -l) times in at.txt"
+echo "et appears $(grep -o -i -l et lorem-copy/* | wc-l) times in lorem-copye folder"
