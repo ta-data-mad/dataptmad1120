@@ -817,3 +817,49 @@ x lorem-copy/sed.txt
 README.md		inputs			lorem			lorem-copy		your-code
 exercices		list_files.sh		lorem-compressed.tar.gz	outputs
 
+(jupyter_env) MacBook-Air-de-Sara:m1 sarahr$ cd lab-bash-master/
+(jupyter_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ ls
+README.md	inputs		lorem-copy
+exercices	lorem		outputs
+(jupyter_env) MacBook-Air-de-Sara:lab-bash-master sarahr$ cd lorem
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ for lorem in * ; do echo ${#lorem} ; done
+6
+9
+7
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ for lorem in * ; do
+> echo -n "$file"
+> echo -n "$file" | wc -c
+> done
+       0
+       0
+       0
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ do
+-bash: syntax error near unexpected token `do'
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ > echo -n "$file"
+-bash: -n: command not found
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ > echo -n "$file" | wc -c
+-bash: -n: command not found
+       0
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ for lorem in *; do
+> echo n "$lorem"
+> 
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ for lorem in *; do
+> echo -n "$lorem"
+> echo -n "$lorem" | wc -c
+> done
+at.txt       6
+echo       4
+lorem.txt       9
+sed.txt       7
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ ls
+at.txt		echo		lorem.txt	sed.txt
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ rm -r echo
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ ls
+at.txt		lorem.txt	sed.txt
+(jupyter_env) MacBook-Air-de-Sara:lorem sarahr$ for lorem in *; do
+> echo -n "$lorem"
+> echo -n "$lorem" | wc -c
+> done
+at.txt       6
+lorem.txt       9
+sed.txt       7
