@@ -1,2 +1,5 @@
-echo "et appears $(grep -o -i "\<et\>" lorem/at.txt | wc -l) times in at.txt"
-echo "et appears $(grep -o -i -l et lorem-copy/* | wc-l) times in lorem-copye folder"
+echo "et appears $(grep -o -i "\<et\>" lorem/at.txt | wc -w) times in at.txt"
+for f in lorem-copy/*.txt ; 
+do
+echo "et appears $(grep -oi "\<et\>" $f | wc -w) times in file $f in lorem-copy folder"
+done
