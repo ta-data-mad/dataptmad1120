@@ -1,0 +1,17 @@
+name="Alvaro"
+echo $name
+mkdir $name
+#ls -l
+rm -r $name
+#ls -l
+
+for f in lorem/*; do
+#echo $(basename $f)
+filename=$(basename $f)
+short="${filename%.*}"
+echo "$short"
+echo -n  "$short" | wc -c
+echo "$short has $(echo -n "$short" | wc -c) characters length"
+done
+
+  
