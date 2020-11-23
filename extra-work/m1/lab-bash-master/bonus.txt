@@ -15,3 +15,8 @@ echo "$short has $(echo -n "$short" | wc -c) characters length"
 done
 
   
+#tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
+tar -czvf lorem-compressed.tar.gz  lorem lorem-copy
+mkdir lorem-uncompressed
+tar -xvf lorem-compressed.tar.gz -C lorem-uncompressed
+ 
