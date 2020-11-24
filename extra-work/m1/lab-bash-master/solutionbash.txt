@@ -1,0 +1,19 @@
+echo "hello world"
+mkdir new_dir
+rm -rf new_dir
+(in lorem)  cp sed.txt /home/markaw/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+(in lorem)  cp {at.txt,lorem.txt,sed.txt} /home/markaw/Bootcamp/dataptmad1120/extra-work/m1/lab-bash-master/lorem-copy
+cat sed.txt
+cat at.txt lorem.txt
+head sed.txt -n 3
+tail sed.txt -n 3
+echo "Homo homini lupus." >> sed.txt
+sed -i 's/et/ET/' at.txt
+w
+pwd
+ls -alh
+wc -l sed.txt
+ls -dq *lorem* | wc -l
+grep -a 'et' at.txt | wc -l
+(in lorem) grep -a 'et' at.txt | wc -l
+(in lorem copy) grep -a 'et' at.txt | wc -l
