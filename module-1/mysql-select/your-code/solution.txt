@@ -1,0 +1,11 @@
+#challenge 1:
+SELECT authors.au_id, authors.au_lname, authors.au_fname,titles.title,publishers.pub_name
+FROM titles 
+JOIN titleauthor ON titles.title_id=titleauthor.title_id 
+JOIN authors ON titleauthor.au_id = authors.au_id
+JOIN publishers ON titles.pub_id=publishers.pub_id 
+order by authors.au_lname;
+
+#challenge 2
+
+
