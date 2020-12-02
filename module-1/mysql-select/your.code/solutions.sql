@@ -1,6 +1,6 @@
 CHALLENGE 1:
-SELECT authors.au_id as 'AUTHOR ID', 
-authors.au_lname as 'LAST NAME', 
+SELECT authors.au_id as 'AUTHOR ID',
+authors.au_lname as 'LAST NAME',
 authors.au_fname as 'FIRST NAME',
 titles.title as 'TITLE',
 publishers.pub_name as 'PUBLISHER'
@@ -13,8 +13,8 @@ JOIN publishers
 on titles.pub_id = publishers.pub_id;
 
 CHALLENGE 2
-SELECT authors.au_id as 'AUTHOR ID', 
-authors.au_lname as 'LAST NAME', 
+SELECT authors.au_id as 'AUTHOR ID',
+authors.au_lname as 'LAST NAME',
 authors.au_fname as 'FIRST NAME',
 titles.title as 'TITLE',
 publishers.pub_name as 'PUBLISHER',
@@ -29,8 +29,8 @@ on titles.pub_id = publishers.pub_id
 GROUP BY authors.au_id, publishers.pub_name;
 
 CHALLENGE 3
-SELECT authors.au_id as 'AUTHOR ID', 
-authors.au_lname as 'LAST NAME', 
+SELECT authors.au_id as 'AUTHOR ID',
+authors.au_lname as 'LAST NAME',
 authors.au_fname as 'FIRST NAME',
 sales.title_id as 'TITLES',
 COUNT(*) as 'TOTAL'
@@ -40,3 +40,16 @@ JOIN authors
 on authors.au_id = titleauthor.au_id
 GROUP BY authors.au_id
 ORDER BY TOTAL DESC LIMIT 3;
+
+CHALLENGE 4
+SELECT
+authors.au_id as 'AUTHOR ID',
+authors.au_lname as 'LAST NAME',
+authors.au_fname as 'FIRST NAME',
+sales.title_id as 'TITLES',
+count(sales.title_id) as 'TOTAL'
+FROM authors
+left join titleauthor on authors.au_id = titleauthor.au_id
+left join sales on titleauthor.title_id = sales.title_id
+group by authors.au_id
+ORDER BY TOTAL DESC;
