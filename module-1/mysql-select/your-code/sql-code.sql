@@ -46,10 +46,10 @@ SELECT authors.au_id as author_id,
 authors.au_fname as first_name, 
 authors.au_lname as last_name ,
 SUM( sales.qty) as total
-FROM titles
-LEFT JOIN titleauthor ON titles.title_id = titleauthor.title_id
-LEFT JOIN authors ON authors.au_id = titleauthor.au_id
-LEFT JOIN sales ON titles.title_id = sales.title_id
+FROM authors
+LEFT JOIN titleauthor ON authors.au_id = titleauthor.au_id
+LEFT JOIN sales ON titleauthor.title_id = sales.title_id
 GROUP BY authors.au_id 
-ORDER BY total DESC
+ORDER BY COALESCE(total ,0) DESC
 ;
+
