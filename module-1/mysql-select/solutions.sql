@@ -1,3 +1,5 @@
+CHALLENGE 1
+
 SELECT * FROM titleauthor;
 
 SELECT authors.au_id as 'Author ID', 
@@ -14,7 +16,7 @@ JOIN publishers
 ON titles.pub_id = publishers.pub_id;
 
 
-EJERCICIO 2
+CHALLENGE 2
 
 SELECT authors.au_id as AUTHOR_ID, 
 authors.au_lname as LAST_NAME, 
@@ -30,3 +32,22 @@ LEFT JOIN publishers
 ON publishers.pub_id = titles.pub_id   
 GROUP BY authors.au_id 
 ORDER BY TOTAL_COUNT DESC;
+
+
+CHALLENGE 3
+
+SELECT  
+authors.au_id as AUTHOR_ID, 
+authors.au_lname as LAST_NAME, 
+authors.au_fname as FIRST_NAME,
+COUNT(titles.ytd_sales) as TOTAL 
+FROM titles
+LEFT JOIN titleauthor 
+ON titles.title_id = titleauthor.title_id 
+LEFT JOIN authors
+ON titleauthor.au_id = authors.au_id 
+LEFT JOIN sales
+ON titles.title_id = sales.title_id
+GROUP BY sales.qty
+ORDER BY TOTAL DESC 
+LIMIT 3;
