@@ -21,12 +21,21 @@ ORDER BY authors.au_id DESC
 
 'Solution for exercise 3'
 
-SELECT authors.au_id as "AUTHOR ID" , au_lname AS "LAST NAME" , au_fname AS "FIRST NAME", ytd_sales AS "TOTAL"
+SELECT authors.au_id as "AUTHOR ID" , au_lname AS "LAST NAME" , au_fname AS "FIRST NAME", sum(ytd_sales) AS "TOTAL"
 FROM authors
 INNER JOIN  titleauthor ON authors.au_id = titleauthor.au_id 
 INNER JOIN  titles ON titleauthor.title_id = titles.title_id 
-GROUP BY title 
+GROUP BY authors.au_id 
 ORDER BY TOTAL DESC
 LIMIT 3;
 
+
 'Solution for exercise 4'
+
+SELECT authors.au_id as "AUTHOR ID" , au_lname AS "LAST NAME" , au_fname AS "FIRST NAME",  IFNULL(sum(ytd_sales), 0) AS "TOTAL"
+FROM authors
+LEFT JOIN  titleauthor ON authors.au_id = titleauthor.au_id 
+LEFT JOIN  titles ON titleauthor.title_id = titles.title_id 
+GROUP BY authors.au_id 
+ORDER BY TOTAL DESC;
+
