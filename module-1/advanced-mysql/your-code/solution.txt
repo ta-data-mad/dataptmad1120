@@ -1,3 +1,5 @@
+#Challenge 1: with subqueries
+
 WITH STEP_1 AS (
 SELECT titles.title_id as 'TITLES', titleauthor.au_id AS 'AUTHOR_ID',
 titles.advance * titleauthor.royaltyper / 100 AS 'ADVANCE', 
@@ -19,3 +21,33 @@ ORDER BY PROFITS DESC
 LIMIT 3
 )
 SELECT * FROM STEP_3
+
+##########Challenge 2: with temporary tables#######
+CREATE TEMPORARY TABLE IF NOT EXISTS STEP_1 AS 
+SELECT titles.title_id as 'TITLES', titleauthor.au_id AS 'AUTHOR_ID',
+titles.advance * titleauthor.royaltyper / 100 AS 'ADVANCE', 
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS 'SALES_ROYALTY'
+FROM sales
+JOIN titles ON sales.title_id =titles.title_id 
+JOIN titleauthor ON titles.title_id = titleauthor.title_id 
+ORDER BY titles.title_id;
+ 
+CREATE TEMPORARY TABLE IF NOT EXISTS STEP_2 AS 
+SELECT  TITLES,AUTHOR_ID, SUM (SALES_ROYALTY) AS 'AGGR_ROY'
+FROM STEP_1
+GROUP BY TITLES,AUTHOR_ID;
+
+CREATE TEMPORARY TABLE IF NOT EXISTS STEP_3 AS 
+SELECT STEP_1.AUTHOR_ID, STEP_2.AGGR_ROY + STEP_1.ADVANCE AS 'PROFITS'
+FROM STEP_1
+LEFT JOIN STEP_2 ON STEP_1.TITLES=STEP_2.TITLES
+GROUP BY STEP_1.AUTHOR_ID
+ORDER BY PROFITS DESC
+LIMIT 3;
+
+SELECT * FROM STEP_3
+
+
+#######Challenge 3: permanent table########
+
+
