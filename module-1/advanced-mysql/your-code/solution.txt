@@ -49,5 +49,6 @@ SELECT * FROM STEP_3
 
 
 #######Challenge 3: permanent table########
-
+CREATE TABLE most_profiting_authors AS
+SELECT * FROM STEP_3
 
