@@ -17,7 +17,7 @@ Challenge 2:
 SELECT authors.au_id as "AUTHOR ID", 
 authors.au_fname as "FIRST NAME", 
 authors.au_lname as "LAST NAME",
-publishegit add rs.pub_name as PUBLISHER,
+publishers.pub_name as PUBLISHER,
 COUNT(DISTINCT titles.title_id) as "TITLE COUNT"
 FROM titles
 JOIN titleauthor ON titles.title_id = titleauthor.title_id
