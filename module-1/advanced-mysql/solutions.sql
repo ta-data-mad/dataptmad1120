@@ -39,6 +39,50 @@ ORDER BY profits DESC
 LIMIT 3;
 
 ##Challenge 2 - Alternative Solution
+##Temporary table creation
+
+CREATE TEMPORARY TABLE IF NOT EXISTS royalties_and_advance AS
+SELECT title_id, au_id, SUM(sales_royalty) as aggregated_royalties, advance 
+FROM (
+	SELECT titles.title_id, au_id, (titles.advance * titleauthor.royaltyper / 100) as advance, 
+	(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) as sales_royalty
+	FROM titles
+	JOIN titleauthor ON titles.title_id = titleauthor.title_id 
+	JOIN sales ON titles.title_id = sales.title_id
+	)
+GROUP BY au_id, title_id
+
+##Query
+
+SELECT au_id, ((SUM(aggregated_royalties)) + (SUM(advance))) AS profits
+FROM royalties_and_advance
+GROUP by au_id
+ORDER BY profits DESC
+LIMIT 3;
+
+## Challenge 3
+
+CREATE TABLE IF NOT EXISTS most_profiting_authors
+AS
+SELECT au_id, ((SUM(aggregated_royalties)) + (SUM(advance))) AS profits
+FROM(
+
+	SELECT title_id, au_id, SUM(sales_royalty) as aggregated_royalties, advance 
+	FROM (
+		SELECT titles.title_id, au_id, (titles.advance * titleauthor.royaltyper / 100) as advance, 
+		(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) as sales_royalty
+		FROM titles
+		JOIN titleauthor ON titles.title_id = titleauthor.title_id 
+		JOIN sales ON titles.title_id = sales.title_id
+	)
+	GROUP BY au_id, title_id
+)
+GROUP by au_id
+ORDER BY profits DESC
+LIMIT 3;
+
+
+
 
 
 
