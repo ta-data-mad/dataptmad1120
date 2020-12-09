@@ -42,4 +42,12 @@ LIMIT 3
 
 Challenge 4:
 
-
+SELECT authors.au_id as author_id, 
+authors.au_fname as first_name, 
+authors.au_lname as last_name ,
+SUM( sales.qty) as total
+FROM authors
+LEFT JOIN titleauthor ON authors.au_id = titleauthor.au_id
+LEFT JOIN sales ON titleauthor.title_id = sales.title_id
+GROUP BY authors.au_id 
+ORDER BY total DESC
