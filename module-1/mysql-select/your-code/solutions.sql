@@ -1,3 +1,4 @@
+'''Ammendments added to exercises 1, 3 and 4'''
 
 'Solution for exercise 1'
 
