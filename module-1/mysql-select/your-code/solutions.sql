@@ -1,5 +1,6 @@
 '''Ammendments added to exercises 1, 3 and 4'''
 
+
 'Solution for exercise 1'
 
 SELECT authors.au_id as "AUTHOR ID" , au_lname AS "LAST NAME" , au_fname AS "FIRST NAME" , title AS "TITLE" , pub_name AS "PUBLISHER"
