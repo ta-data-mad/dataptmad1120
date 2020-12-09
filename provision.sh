@@ -1,9 +1,11 @@
- apt-get update -q
- su - vagrant
+#!/bin/bash
 
- echo "downloading miniconda"
- wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
- chmod +x miniconda.sh
+apt-get update -q
+su - vagrant
+
+echo "downloading miniconda"
+wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+chmod +x miniconda.sh
 
 echo "installing miniconda"
 ./miniconda.sh -b -p /home/vagrant/miniconda3
@@ -46,4 +48,30 @@ echo "Activating Jupyterhub service definition"
 sudo systemctl daemon-reload
 sudo systemctl start jupyterhub
 sudo systemctl enable jupyterhub
+
+echo "Installing MySQL"
+sudo apt install -y dirmngr
+sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 5072E1F5
+echo "deb http://repo.mysql.com/apt/debian $(lsb_release -sc) mysql-8.0" | \
+    sudo tee /etc/apt/sources.list.d/mysql80.list
+sudo apt-get update
+sudo mkdir -p /etc/mysql
+sudo cat << EOF > /etc/mysql/my.cnf
+[mysqld]
+default_authentication_plugin=mysql_native_password
+EOF
+sudo apt install mysql-server -y
+echo "Creating root user"
+sudo mysql -u root -e 'ALTER USER "root"@"localhost" IDENTIFIED BY "root"'
+sudo mysql -u root -proot -e 'CREATE USER "root"@"%" IDENTIFIED BY "root"'
+sudo mysql -u root -proot -e 'GRANT ALL PRIVILEGES ON *.* TO "root"@"%" WITH GRANT OPTION'
+sudo mysql -u root -proot -e 'FLUSH PRIVILEGES'
+
+echo "Enabling remote connections"
+sudo sed -i "s/^bind-address.*//" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i "s/^mysqlx-bind-address.*//" /etc/mysql/mysql.conf.d/mysqld.cnf
+
+echo "Restarting and enabing mysql service"
+sudo systemctl restart mysql.service
+sudo systemctl enable mysql.service
 

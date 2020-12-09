@@ -1,0 +1,11 @@
+vagrant up -- arrancar
+vagrant halt -- parar 
+exit
+vagrant ssh -- conectar
+vagrant destroy
+vagrant provision
+
+
+-- cd /vagrant
+
+

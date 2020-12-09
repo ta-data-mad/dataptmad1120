@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
 
   # Forwarded port for Jupyter Hub
   config.vm.network "forwarded_port", guest: 8000, host: 8000
+  
+  # Forwarded port for MySQL
+  config.vm.network "forwarded_port", guest: 3306, host: 3306
 
   config.vm.provider "virtualbox" do |vb|
 
