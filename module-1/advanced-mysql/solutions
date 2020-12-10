@@ -1,0 +1,63 @@
+CHALLENGE 1
+SELECT titleauthor.title_id AS TitleID,
+titleauthor.au_id AS AuthorID,
+titles.advance * titleauthor.royaltyper / 100 AS Advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS sales_royalty
+FROM titleauthor 
+JOIN titles on titleauthor.title_id = titles.title_id
+JOIN sales on titleauthor.title_id = sales.title_id
+
+step 2
+WITH step1 AS (
+SELECT titleauthor.title_id AS TitleID,
+titleauthor.au_id AS AuthorID,
+titles.advance * titleauthor.royaltyper / 100 AS Advance,
+SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS sales_royalty)
+FROM titleauthor 
+JOIN titles on titleauthor.title_id = titles.title_id
+JOIN sales on titleauthor.title_id = sales.title_id)
+SELECT TitleID, AuthorID, sum(sales_royalty) AS TotalRoyalties, Advance FROM step1 group by TitleID, AuthorID
+
+step 3
+WITH step2 AS (
+WITH step1 AS (
+SELECT titleauthor.title_id AS TitleID,
+titleauthor.au_id AS AuthorID,
+titles.advance * titleauthor.royaltyper / 100 AS Advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS sales_royalty
+FROM titleauthor 
+JOIN titles on titleauthor.title_id = titles.title_id
+JOIN sales on titleauthor.title_id = sales.title_id)
+SELECT TitleID, AuthorID, sum(sales_royalty) AS TotalRoyalties, Advance FROM step1 group by TitleID, AuthorID)
+SELECT AuthorID, sum(TotalRoyalties + Advance) AS Profits FROM step2 GROUP BY AuthorID
+ORDER BY Profits DESC Limit 3
+
+CHALLENGE 2
+CREATE TEMPORARY TABLE Step_1 AS SELECT titleauthor.title_id AS TitleID,
+titleauthor.au_id AS AuthorID,
+titles.advance * titleauthor.royaltyper / 100 AS Advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS sales_royalty
+FROM titleauthor 
+JOIN titles on titleauthor.title_id = titles.title_id
+JOIN sales on titleauthor.title_id = sales.title_id;
+
+CREATE TEMPORARY TABLE Step_2 AS 
+SELECT TitleID, AuthorID, sum(sales_royalty) AS TotalRoyalties, Advance FROM Step_1 group by TitleID, AuthorID;
+
+CREATE TEMPORARY TABLE Step_3 AS
+SELECT AuthorID, sum(TotalRoyalties + Advance) AS Profits FROM Step_2 GROUP BY AuthorID
+ORDER BY Profits DESC Limit 3;
+
+CHALLENGE 3
+CREATE TABLE IF NOT EXISTS most_profiting_authors AS WITH step2 AS (
+WITH step1 AS (
+SELECT titleauthor.title_id AS TitleID,
+titleauthor.au_id AS AuthorID,
+titles.advance * titleauthor.royaltyper / 100 AS Advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS sales_royalty
+FROM titleauthor 
+JOIN titles on titleauthor.title_id = titles.title_id
+JOIN sales on titleauthor.title_id = sales.title_id)
+SELECT TitleID, AuthorID, sum(sales_royalty) AS TotalRoyalties, Advance FROM step1 group by TitleID, AuthorID)
+SELECT AuthorID, sum(TotalRoyalties + Advance) AS Profits FROM step2 GROUP BY AuthorID
+ORDER BY Profits
