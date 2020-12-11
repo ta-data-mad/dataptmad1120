@@ -48,7 +48,7 @@ LIMIT 3;
 
 
 #CHALLENGE 2
---1--
+---1---
 CREATE TABLE IF NOT EXISTS temp_table AS
 SELECT step_1.title_id,
           step_1.au_id,
@@ -64,7 +64,7 @@ SELECT step_1.title_id,
       INNER JOIN titleauthor ON titleauthor.title_id = sales.title_id) step_1
    GROUP BY step_1.title_id,
             step_1.au_id
---2--            
+---2---            
 SELECT temp_table.au_id AS "Author ID",
 ROUND(SUM(temp_table.Advance + temp_table.Royalties),2) AS Profits
 FROM temp_table
@@ -74,7 +74,7 @@ LIMIT 3;
 
 #CHALLENGE 3
 
---1--
+---1---
 CREATE TEMPORARY TABLE IF NOT EXISTS temp_table2 AS
 SELECT temp_table.au_id AS "Author ID",
 ROUND(SUM(temp_table.Advance + temp_table.Royalties),2) AS Profits
@@ -82,7 +82,7 @@ FROM temp_table
 GROUP BY "Author ID"
 ORDER BY Profits DESC
 LIMIT 3;
---2--
+---2---
 CREATE TABLE IF NOT EXISTS most_profiting_authors AS
 SELECT "Author ID",
 Profits
