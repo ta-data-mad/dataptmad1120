@@ -1,1 +1,84 @@
-.
+CHALLENGE 1
+
+WITH calc_advance_and_royalty AS (
+SELECT 
+titleauthor.title_id as title_id,
+titleauthor.au_id as author_id,
+titles.advance * titleauthor.royaltyper / 100 AS advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 as royalty
+FROM titles
+JOIN titleauthor
+ON titleauthor.title_id = titles.title_id
+JOIN sales
+ON sales.title_id = titleauthor.title_id
+ORDER BY titleauthor.title_id
+),
+total_royalties AS
+(
+SELECT
+calc_advance_and_royalty.title_id,
+calc_advance_and_royalty.author_id,
+calc_advance_and_royalty.advance,
+SUM(calc_advance_and_royalty.royalty) as royalties
+FROM calc_advance_and_royalty
+GROUP BY calc_advance_and_royalty.title_id,calc_advance_and_royalty.author_id
+ORDER BY calc_advance_and_royalty.title_id
+)
+SELECT 
+total_royalties.author_id,
+ROUND(SUM(total_royalties.advance + total_royalties.royalties),2) as profits
+FROM total_royalties
+GROUP BY total_royalties.author_id
+ORDER BY profits DESC 
+LIMIT 3;
+FROM total_royalties;
+
+
+CHALLENGE 2
+
+CREATE TEMPORARY TABLE IF NOT EXISTS calc_advance_and_royalty AS
+SELECT 
+titleauthor.title_id as title_id,
+titleauthor.au_id as author_id,
+titles.advance * titleauthor.royaltyper / 100 AS advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 as royalty
+FROM titles
+JOIN titleauthor
+ON titleauthor.title_id = titles.title_id
+JOIN sales
+ON sales.title_id = titleauthor.title_id
+ORDER BY titleauthor.title_id;
+
+CREATE TEMPORARY TABLE IF NOT EXISTS total_royalties AS
+SELECT
+calc_advance_and_royalty.title_id,
+calc_advance_and_royalty.author_id,
+calc_advance_and_royalty.advance,
+SUM(calc_advance_and_royalty.royalty) as royalties
+FROM calc_advance_and_royalty
+GROUP BY calc_advance_and_royalty.title_id,calc_advance_and_royalty.author_id
+ORDER BY calc_advance_and_royalty.title_id;
+
+
+SELECT 
+total_royalties.author_id,
+ROUND(SUM(total_royalties.advance + total_royalties.royalties),2) as profits
+FROM total_royalties
+GROUP BY total_royalties.author_id
+ORDER BY profits DESC 
+LIMIT 3;
+FROM total_royalties;
+
+
+CHALLENGE 3
+
+
+CREATE TABLE IF NOT EXISTS most_profiting_authors AS
+SELECT 
+total_royalties.author_id,
+ROUND(SUM(total_royalties.advance + total_royalties.royalties),2) as profits
+FROM total_royalties
+GROUP BY total_royalties.author_id
+ORDER BY profits DESC 
+LIMIT 3;
+FROM total_royalties;
