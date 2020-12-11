@@ -98,3 +98,15 @@ FROM step2
 GROUP BY authors
 ORDER BY profits DESC 
 LIMIT 3;
+
+
+Challenge 3:
+
+create table most_profiting_authors AS
+SELECT 
+authors,
+sum(royalties)+sum(advance) AS profits
+FROM step2
+GROUP BY authors
+ORDER BY profits DESC 
+LIMIT 3;
