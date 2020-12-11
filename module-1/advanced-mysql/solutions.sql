@@ -80,3 +80,6 @@ FROM temporary_table
 GROUP BY "Author ID"
 ORDER BY "Profits" DESC
 LIMIT 3;
+
+-- Challenge 3
+-- Step 1 --
