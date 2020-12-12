@@ -60,4 +60,4 @@ JOIN titles on titleauthor.title_id = titles.title_id
 JOIN sales on titleauthor.title_id = sales.title_id)
 SELECT TitleID, AuthorID, sum(sales_royalty) AS TotalRoyalties, Advance FROM step1 group by TitleID, AuthorID)
 SELECT AuthorID, sum(TotalRoyalties + Advance) AS Profits FROM step2 GROUP BY AuthorID
-ORDER BY Profits
+ORDER BY Profits DESC
