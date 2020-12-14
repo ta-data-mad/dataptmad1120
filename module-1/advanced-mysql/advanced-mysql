@@ -58,3 +58,8 @@ FROM
 GROUP BY step_2.au_id
 ORDER BY Profits DESC
 LIMIT 3;
+
+
+
+
+
