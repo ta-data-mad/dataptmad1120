@@ -101,4 +101,27 @@ ORDER BY Profits DESC
 LIMIT 3;
 
 -- CHALLENGE 3 --
+CREATE TABLE IF NOT EXITS Most Profiting Authors
 
+AS
+
+SELECT titleauthor.au_id AS 'Author ID', 
+((SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)) + 
+SUM(titles.advance * titleauthor.royaltyper / 100 ))) as 'Profits'
+
+FROM (
+ SELECT titleauthor.title_id AS 'Title ID',
+ titleauthor.au_id AS 'Author ID',
+ titles.advance * titleauthor.royaltyper / 100 AS'Advance',
+ titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 AS 'Royalty'
+ FROM titles
+ JOIN sales ON sales.title_id = titles.title_id
+ JOIN titleauthor ON titleauthor.title_id = sales.title_id
+ ORDER BY titleauthor.title_id;
+ )
+ GROUP BY 'Author ID', 'Title ID'
+)
+
+GROUP BY 'Author ID'
+ORDER BY 'Profits' desc
+LIMIT 3;
