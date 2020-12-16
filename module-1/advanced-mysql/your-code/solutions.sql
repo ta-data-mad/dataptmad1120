@@ -29,7 +29,7 @@ FROM
    INNER JOIN sales ON sales.title_id = titles.title_id
    INNER JOIN titleauthor ON titleauthor.title_id = sales.title_id) step_1
 GROUP BY 
-	step_1.title_id,
+         step_1.title_id,
          step_1.au_id
 ORDER BY step_1.title_id;
 
@@ -58,6 +58,11 @@ FROM
 GROUP BY step_2.au_id
 ORDER BY Profits DESC
 LIMIT 3;
+  (SELECT
+   titleauthor.title_id,
+   titleauthor.au_id,
+   titles.advance * titleauthor.royaltyper / 100 AS Advance,
+   titles.price * sales.qty * titles.royalty / 100 * titleauthor.royal
 
 
 
