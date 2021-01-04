@@ -8,7 +8,7 @@ print(my_listComprehension)
 
 #Insert here the module/library import statements 
 
-
+import math as mth
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
