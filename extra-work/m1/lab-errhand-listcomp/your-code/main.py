@@ -7,44 +7,55 @@ my_listComprehension = [1/egg for egg in eggs]
 print(my_listComprehension)
 
 #Insert here the module/library import statements 
-
-
+import numpy as np
+import pandas as pd
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
-
+square = [x**2 for x in range(20)]
+print(square)
 
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
+power_of_two = []
 
+for n in range(50):
+    power = 2**n
+    power_of_two.append(power)
 
-
+print(power_of_two)
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
+import math
 
+sqrt = [math.sqrt(x) for x in range(100)]
+print(sqrt)
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
-
-
+my_list = [x-10 for x in range(11)]
+print(my_list)
 
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
-
+odds = [x for x in range(101) if x % 2 == 1]
+print(odds)
 
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+divisible_by_seven = [x for x in range(1001) if x % 7 == 0]
+print(divisible_by_seven)
 
 
 
@@ -53,8 +64,13 @@ print(my_listComprehension)
 # You can use the following test string but feel free to modify at your convenience
 
 teststring = 'Find all of the words in a string that are monosyllabic'
+non_vowels = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
 
-
+for x in teststring.lower():
+    if x not in non_vowels:
+        teststring = teststring.replace(x,"")
+        
+print(teststring)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
