@@ -226,15 +226,15 @@ square_f()
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
-
-results = [x for x in range(1,1001) if x % 2 == 0 | x % 3 == 0 | x % 4 == 0 | x % 5 == 0 | x % 6 == 0 | x % 7 == 0 | x % 8 == 0 | x % 9 == 0]
-print(results)
-
+for i in range(2,10):
+    results = [x for x in range(1,1001) if x % i == 0]
+    print(results)
 
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
 
+# Not a clue :(
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
