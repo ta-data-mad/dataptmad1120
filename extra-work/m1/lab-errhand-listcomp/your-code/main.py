@@ -1,4 +1,5 @@
-#Example: 
+"""
+#Example:
 
 eggs = (1,3,8,3,2)
 
@@ -105,18 +106,18 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
-for i in ['a','b','c']:
-    print i**2
+#for i in ['a','b','c']:
+ #   print i**2
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
 
-x = 5
-y = 0
+# = 5
+#y = 0
 
-z = x/y
+#z = x/y
 
 
 
@@ -147,9 +148,9 @@ f.write('Test write this')
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
-fp = open('myfile.txt')
-    line = f.readline()
-    i = int(s.strip())
+#fp = open('myfile.txt')
+#    line = f.readline()
+#    i = int(s.strip())
 
 
 
@@ -159,9 +160,9 @@ fp = open('myfile.txt')
 # Handle this exception using try and except blocks. 
 # You will probably need to import sys 
 
-def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
+#def linux_interaction():
+#    assert ('linux' in sys.platform), "Function can only run on Linux systems."
+#    print('Doing something.')
 
 
 # Bonus Questions:
@@ -171,14 +172,24 @@ def linux_interaction():
 #21.  Write a function that asks for an integer and prints the square of it. 
 # Hint: we need to continually keep checking until we get an integer.
 # Use a while loop with a try,except, else block to account for incorrect inputs.
+"""
 
+'''def square_f():
+    try:
+        x = int(input('You may need to input an integer to check the square of it:'))
+        return print(f'Result:{x**2}')
+    except ValueError:
+        return print('Es un valor string')
 
+square_f()
+'''
 
 
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
-# Use results as the name of the list 
+# Use results as the name of the list
 
-
+results = [x for i in range(2,10) for x in range(1,1001) if x % i == 0]
+print(results)
 
 
 # 23. Define a customised exception to handle not accepted values. 
