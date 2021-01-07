@@ -77,35 +77,57 @@ print(teststring)
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
+capital_letters = 'The Quick Brown Fox Jumped Over The Lazy Dog'
 
+for x in capital_letters:
+    if not x.isupper():
+        capital_letters = capital_letters.replace(x,"")
 
+print(capital_letters)        
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
-
-
+consonants = 'The quick brown fox jumped over the lazy dog'
+for x in consonants.lower():
+    if x not in non_vowels:
+        consonants = consonants.replace(x,"")
+        
+print(consonants)
 
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
+import os
+
+for file in os.listdir("/home/alvaro/Bootcamp/dataptmad1120"):
+    print(file)
 
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
+import random
 
-
+random_lists = []
+for number in range(4):
+    random_lists.append(random.sample(range(101), 10))
+print(random_lists)
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
 # Remember to use list comprehensions and to print your results
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
+flatten_list = []
+for sublist in list_of_lists:
+    for item in sublist:
+        flatten_list.append(item)
 
+print(flatten_list)
 
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
@@ -115,7 +137,12 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
+floats = []
+for sublist in list_of_lists:
+    for item in sublist:
+        floats.append(float(item))
 
+print(floats)
 
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
@@ -132,30 +159,50 @@ for i in ['a','b','c']:
 x = 5
 y = 0
 
-z = x/y
-
-
-
-
+try:
+    z = x/y
+    print(z)
+except ZeroDivisionError as zerodivision:
+    print(zerodivision)
+finally:
+    print('All Done.')
+    
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
+
+try:
+    print(abc[3])
+except IndexError as index:
+    print(index)
 
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+print('Enter two numbers to be divided:')
+x = float(input())
+y = float(input())
 
+try:
+    print(x / y)
+except ZeroDivisionError as zerodivision:
+    print(zerodivision)
+except ValueError as value:
+    print(value)
 
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
 f = open('testfile','r')
-f.write('Test write this')
+
+try:
+    f.write('Test write this')
+except FileNotFoundError as file:
+    print(file)
 
 
 
@@ -163,10 +210,12 @@ f.write('Test write this')
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
+try:
 fp = open('myfile.txt')
     line = f.readline()
     i = int(s.strip())
-
+except FileNotFoundError as file:
+    print(file)
 
 
 
