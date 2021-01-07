@@ -91,8 +91,11 @@ print(consonants)
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-files=[]
-print(files)
+directorio='/home/alvaro/Dropbox/IRONHACK/dataptmad1120/'
+if os.path.exists(directory):
+    files=[i for i in os.listdir(directory) if os.path.isdir(directory+i)]
+    files.sort()
+    print(files)
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
@@ -115,7 +118,8 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
-
+floats= [float(k) for i in list_of_lists for k in i]
+print(floats)
 
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
