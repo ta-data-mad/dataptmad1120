@@ -149,7 +149,10 @@ print(floats)
 
 
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print(i**2)
+    except:
+        print('There was an error')
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -211,7 +214,7 @@ except FileNotFoundError as file:
 #Hint: the file could not exist and the data could not be convertable to int
 
 try:
-fp = open('myfile.txt')
+    fp = open('myfile.txt')
     line = f.readline()
     i = int(s.strip())
 except FileNotFoundError as file:
@@ -225,10 +228,12 @@ except FileNotFoundError as file:
 # You will probably need to import sys 
 
 def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
-
-
+    try:
+        assert ('linux' in sys.platform), "Function can only run on Linux systems."
+        print('Doing something.')
+    except OSError as os:
+        print(os)
+        
 # Bonus Questions:
 
 # You will need to make some research on dictionary comprehension to solve the following questions
@@ -237,6 +242,13 @@ def linux_interaction():
 # Hint: we need to continually keep checking until we get an integer.
 # Use a while loop with a try,except, else block to account for incorrect inputs.
 
+print('Enter a number:')
+x = int(input())
+
+try:
+    x = x ** 2
+except:
+    print('Please enter a number')
 
 
 
