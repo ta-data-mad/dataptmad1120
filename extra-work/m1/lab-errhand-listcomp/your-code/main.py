@@ -91,7 +91,7 @@ print(consonants)
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-directorio='/home/alvaro/Dropbox/IRONHACK/dataptmad1120/'
+directory='/home/alvaro/Dropbox/IRONHACK/dataptmad1120/'
 if os.path.exists(directory):
     files=[i for i in os.listdir(directory) if os.path.isdir(directory+i)]
     files.sort()
@@ -214,18 +214,38 @@ def linux_interaction():
 # Use a while loop with a try,except, else block to account for incorrect inputs.
 
 
-
-
+while True:
+    try:
+        i = int(input("Enter an integer"))
+        break
+    except ValueError:
+        pass
+print(i**2)
+    
+    
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
-
+def div_by_single_digit(i):
+    check=[True for digit in range(1,10) if i%digit==0 ]
+    return sum(check)>1
+results=[i for i in range(1,1001) if div_by_single_digit(i)]
+print(results)
 
 
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
 
-Total_Marks = int(input("Enter Total Marks Scored: ")) 
-Num_of_Sections = int(input("Enter Num of Sections: "))
+class UnacceptedValue(Exception):
+    pass
 
+try:
+    Total_Marks = int(input("Enter Total Marks Scored: ")) 
+    Num_of_Sections = int(input("Enter Num of Sections: "))
+    if Num_of_Sections <2:
+        raise UnacceptedValue
+except UnacceptedValue:
+    print("Value for Num of Sections is too small")
+except ValueError:
+    print("Value introduced not supported")
