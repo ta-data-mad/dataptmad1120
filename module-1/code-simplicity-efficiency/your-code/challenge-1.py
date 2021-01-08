@@ -167,3 +167,4 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+
