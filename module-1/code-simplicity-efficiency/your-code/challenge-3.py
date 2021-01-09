@@ -26,5 +26,5 @@ def my_function(X):
 
 X = input("What is the maximal length of the triangle side? Enter a number: ")
 
-print(f"The longest side possible is {my_function(int(X))}" )
+print(f"The longest side possible is {my_function(int(X))}")
 
