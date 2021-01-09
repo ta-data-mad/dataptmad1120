@@ -7,32 +7,37 @@ The code is functional but has a lot of room for improvement. Use what you have 
 about simple and efficient code, refactor the code.
 """
 
-def RandomStringGenerator(l=12, a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
-    p = 0
-    s = ''
-    while p<l:
-        import random
-        s += random.choice(a)
-        p += 1
-    return s
+# Let's put some order in this mess. First of all is important to import all needed libraries at the very beginning.
+# Also would seem a good idea to ask for all needed variables at the start of the code in order to facilitate the understanding.
+# A very important improvement is provide a better name for all required variables.
 
-def BatchStringGenerator(n, a=8, b=12):
-    r = []
-    for i in range(n):
-        c = None
-        if a < b:
-            import random
-            c = random.choice(range(a, b))
-        elif a == b:
-            c = a
+import random
+import sys
+import string
+
+min_str_leng = input('Enter minimum string length: ')
+max_str_leng = input('Enter maximum string length: ')
+number_str = input('How many random strings to generate? ')
+
+def BatchStringGenerator(number_str, min_str_leng, max_str_leng):
+    words = []
+    for word in range(number_str):
+        if min_str_leng <= max_str_leng:
+            num_letters = random.choice(range(min_str_leng, max_str_leng))
         else:
-            import sys
             sys.exit('Incorrect min and max string lengths. Try again.')
-        r.append(RandomStringGenerator(c))
-    return r
+            
+        words.append(RandomStringGenerator(num_letters))
+        
+    return words
 
-a = input('Enter minimum string length: ')
-b = input('Enter maximum string length: ')
-n = input('How many random strings to generate? ')
+def RandomStringGenerator(num_letters, lst=list(string.ascii_lowercase)+list(string.digits)):
+    letter = 0
+    string = ''
+    while letter<num_letters:
+        string += random.choice(lst)
+        letter += 1
+    return string
 
-print(BatchStringGenerator(int(n), int(a), int(b)))
+
+print(BatchStringGenerator(int(number_str), int(min_str_leng), int(max_str_leng)))
