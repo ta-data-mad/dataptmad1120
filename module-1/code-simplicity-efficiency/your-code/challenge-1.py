@@ -23,18 +23,18 @@ numbers = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seve
 
 try:
     if b == 'plus': #this lines are for the sum
-        d_value = float(numbers.get(a)) + float(numbers.get(c))
-        d_str = list(numbers.keys())[list(numbers.values()).index(d_value)]
-        print(f'{a} {b} {c} equals {d_str}')
+        result_value = float(numbers.get(a)) + float(numbers.get(c))
+        result_str = list(numbers.keys())[list(numbers.values()).index(result_value)]
+        print(f'{a} {b} {c} equals {result_str}')
     elif b == 'minus': #these are for the substraction, separating between positive results and negative
         if float(numbers.get(a)) > float(numbers.get(c)):
-            d_value = abs(float(numbers.get(a)) - float(numbers.get(c)))
-            d_str = list(numbers.keys())[list(numbers.values()).index(d_value)]
-            print(f'{a} {b} {c} equals {d_str}')
+            result_value = abs(float(numbers.get(a)) - float(numbers.get(c)))
+            result_str = list(numbers.keys())[list(numbers.values()).index(result_value)]
+            print(f'{a} {b} {c} equals {result_str}')
         else:
-            d_value = abs(float(numbers.get(a)) - float(numbers.get(c)))
-            d_str = list(numbers.keys())[list(numbers.values()).index(d_value)]
-            print(f'{a} {b} {c} equals negative {d_str}')
+            result_value = abs(float(numbers.get(a)) - float(numbers.get(c)))
+            result_str = list(numbers.keys())[list(numbers.values()).index(result_value)]
+            print(f'{a} {b} {c} equals negative {result_str}')
     else: #in case plus or minus are mispelled
         print("I am not able to answer this question. Check your input.")
 except: #in case any of the numbers are mispelled
