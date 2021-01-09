@@ -31,21 +31,21 @@ my_dict={'zero': 0, 'one':1, 'two':2, 'three':3, 'four':4, 'five':5}
 #dictionary to convert integer to string
 reversed_dictionary = {value : key for (key, value) in my_dict.items()}
 #adding values above 5
-reversed_dictionary{6}='six'
-reversed_dictionary{7}='seven'
-reversed_dictionary{8}='eight'
-reversed_dictionary{9}='nine'
-reversed_dictionary{10}='ten'
+reversed_dictionary[6]='six'
+reversed_dictionary[7]='seven'
+reversed_dictionary[8]='eight'
+reversed_dictionary[9]='nine'
+reversed_dictionary[10]='ten'
 
 if b=='plus':
     result_int=my_dict[a]+my_dict[c] #numeric operation
-    result=reversed_dictionary{result_int} #convert to string
+    result=reversed_dictionary[result_int] #convert to string
 if b=='minus':
     result_int=my_dict[a]-my_dict[c]  #numeric operation
     if result_int>=0:
-        result=reversed_dictionary{result_int} #convert to string
+        result=reversed_dictionary[result_int] #convert to string
     if result_int<0:
-        result=f'negative {reversed_dictionary{abs(result_int)}}' #convert to string when negative
+        result=f'negative {reversed_dictionary[abs(result_int)]}' #convert to string when negative
     
     
 print(f'{a} {b} {c} equals {result}')
