@@ -11,20 +11,23 @@ For example, if you are given the number 15, there are 3 possibilities to compos
 The following function shows one way to solve the problem but the code is not ideal or efficient.
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
+a = input("What is the maximal length of the triangle side? Enter a number lager than five: ")
+max_length=int(a)
 
-def my_function(X):
+def longest_side(max_length):
     solutions = []
-    for x in range(5, X):
-        for y in range(4, X):
-            for z in range(3, X):
+    for x in range(5, max_length):
+        for y in range(4, max_length):
+            for z in range(3, max_length):
                 if (x*x==y*y+z*z):
                     solutions.append([x, y, z])
-    m = 0
-    for solution in solutions:
-        if m < max(solution):
-            m = max(solution)
-    return m
+    max_side = 0
+    for i in solutions:
+        if max_side < max(i):
+            max_side = max(i)
+    return max_side
 
-X = input("What is the maximal length of the triangle side? Enter a number: ")
-
-print("The longest side possible is " + str(my_function(int(X))))
+if max_length < 5:
+    print("Enter a number larger than 5")
+else:   
+    print(f"The longest side possible is {longest_side(max_length)}")
