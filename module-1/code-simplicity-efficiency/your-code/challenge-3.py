@@ -12,19 +12,48 @@ The following function shows one way to solve the problem but the code is not id
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
 
-def my_function(X):
+# Improved code
+# print statement changed to f-string 
+# One letter variables changed to more descriptive names: m= max_length ; x = input_int ; X = value
+# Variable type changes moved from print statement 
+
+def my_function(value):
     solutions = []
-    for x in range(5, X):
-        for y in range(4, X):
-            for z in range(3, X):
+    for x in range(5, value):
+        for y in range(4, value):
+            for z in range(3, value):
                 if (x*x==y*y+z*z):
                     solutions.append([x, y, z])
-    m = 0
+    #list comprehension does not seem clear with three for loops.
+    max_length = 0
+    #print(solutions) could help debugging
     for solution in solutions:
-        if m < max(solution):
-            m = max(solution)
-    return m
+        if max_length < max(solution):
+            max_length = max(solution)
+    return str(max_length)
 
-X = input("What is the maximal length of the triangle side? Enter a number: ")
+input_int = int(input("What is the maximal length of the triangle side? Enter a number: "))
 
-print("The longest side possible is " + str(my_function(int(X))))
+print(f"The longest side possible is {my_function(input_int)}")
+
+
+
+
+
+# Original code
+# def my_function(X):
+#     solutions = []
+#     for x in range(5, X):
+#         for y in range(4, X):
+#             for z in range(3, X):
+#                 if (x*x==y*y+z*z):
+#                     solutions.append([x, y, z])
+#     m = 0
+#     for solution in solutions:
+#         if m < max(solution):
+#             m = max(solution)
+#     return m
+
+# X = input("What is the maximal length of the triangle side? Enter a number: ")
+
+# print("The longest side possible is " + str(my_function(int(X))))
