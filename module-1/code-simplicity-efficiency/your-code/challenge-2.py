@@ -5,7 +5,7 @@ the strings being generated.
 
 The code is functional but has a lot of room for improvement. Use what you have learned
 about simple and efficient code, refactor the code.
-"""
+
 
 def RandomStringGenerator(l=12, a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
     p = 0
@@ -36,3 +36,38 @@ b = input('Enter maximum string length: ')
 n = input('How many random strings to generate? ')
 
 print(BatchStringGenerator(int(n), int(a), int(b)))
+"""
+
+"""
+In this case, I found it quite hard to understand what each variable respresents. As we learned in class, variables should be self-explanatory, so I changed the names of a number of variables to make the code easier to read 
+"""
+
+def RandomStringGenerator(length=12, a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
+    p = 0
+    s = ''
+    while p<length:
+        import random
+        s += random.choice(a)
+        p += 1
+    return s
+
+def BatchStringGenerator(str_n, min_str_l = 8, max_str_l = 12):
+    result = []
+    for i in range(str_n):
+        c = None
+        if min_str_l < max_str_l:
+            import random
+            c = random.choice(range(min_str_l , max_str_l))
+        elif min_str_l  == max_str_l:
+            c = min_str_l 
+        else:
+            import sys
+            sys.exit('Incorrect min and max string lengths. Try again.')
+        result.append(RandomStringGenerator(c))
+    return r
+
+min_str_l = input('Enter minimum string length: ')
+max_str_l  = input('Enter maximum string length: ')
+str_n = input('How many random strings to generate? ')
+
+print(BatchStringGenerator(int(str_n), int(min_str_l), int(max_str_l)))
