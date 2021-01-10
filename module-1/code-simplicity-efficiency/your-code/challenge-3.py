@@ -12,6 +12,16 @@ The following function shows one way to solve the problem but the code is not id
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
 
+##SOLUTION
+def my_function(X):
+    solutions = [[x, y, z] for x in range(5, X) for y in range(4, X) for z in range(3, X) if x*x== y*y+z*z] #list comprehension for all loops
+    return max([elements for solution in solutions for elements in solution]) #list comprehension to have just one list of numbers
+X = input("What is the maximal length of the triangle side? Enter a number: ")
+
+print("The longest side possible is " + str(my_function(int(X))))
+
+
+##EXERCISE
 def my_function(X):
     solutions = []
     for x in range(5, X):
@@ -19,6 +29,7 @@ def my_function(X):
             for z in range(3, X):
                 if (x*x==y*y+z*z):
                     solutions.append([x, y, z])
+                   
     m = 0
     for solution in solutions:
         if m < max(solution):

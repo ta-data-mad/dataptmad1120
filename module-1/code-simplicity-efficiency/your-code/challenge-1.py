@@ -8,6 +8,37 @@ expects.
 The code is very long and messy. Refactor it according to what you have learned about
 code simplicity and efficiency.
 """
+##SOLUTION
+print('Welcome to this calculator!\n''It can add and subtract whole numbers from zero to five')
+a = input('Please choose your first number (zero to five): ')
+b = input('What do you want to do? plus or minus: ')
+c = input('Please choose your second number (zero to five): ')
+
+#create two dicts, one with user's input as key and int as value, another with the result as key and the string as value
+input_numbers = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5}
+output_words = {0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 
+            -5: 'negative five', -4: 'negative four', -3: 'negative three', -2: 'negative two', -1: 'negative one'}
+
+#check if a and c are in the input_numbers dict
+            
+if a in input_numbers and c in input_numbers:
+    if b == 'plus': 
+        result = input_numbers[a] + input_numbers[c] #assign the result to a variable so we can check the output_words
+        if result in output_words:
+            result = output_words[result]
+            print(f'{a} {b} {c} equals {result}')
+    elif b == 'minus':
+        result = input_numbers[a] - input_numbers[c]
+        if result in output_words:
+            result = output_words[result]
+            print(f'{a} {b} {c} equals {result}')
+else:
+    print("I am not able to answer this question. Check your input.")
+print("Thanks for using this calculator, goodbye :)")
+
+
+##MESSY CODE
+
 
 print('Welcome to this calculator!')
 print('It can add and subtract whole numbers from zero to five')
@@ -167,3 +198,4 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+
