@@ -9,11 +9,21 @@ The code is very long and messy. Refactor it according to what you have learned 
 code simplicity and efficiency.
 """
 
-print('Welcome to this calculator!')
-print('It can add and subtract whole numbers from zero to five')
-a = input('Please choose your first number (zero to five): ')
-b = input('What do you want to do? plus or minus: ')
-c = input('Please choose your second number (zero to five): ')
+# First make one print instead 2. 
+
+
+print('''Welcome to this calculator!
+    It can add and subtract whole numbers from zero to five''')
+
+
+# Verbose variables
+
+first_number = input('Please choose your first number (zero to five): ')
+add_minus = input('What do you want to do? plus or minus: ')
+second_number = input('Please choose your second number (zero to five): ')
+
+
+
 
 if a == 'zero' and b == 'plus'  and c == 'zero':
     print("zero plus zero equals zero")
