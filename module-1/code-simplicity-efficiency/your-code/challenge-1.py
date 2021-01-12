@@ -15,6 +15,19 @@ a = input('Please choose your first number (zero to five): ')
 b = input('What do you want to do? plus or minus: ')
 c = input('Please choose your second number (zero to five): ')
 
+#First of all, the code that stops the calculation because an error in the inputs is put in first place. That could be resumed using a list of possible inputs.
+
+number_inputs = ['zero', 'one', 'two', 'three', 'four', 'five']
+operation_inputs = ['plus', 'minus']
+
+if a not in number_inputs or b not in operation_inputs or c not in number_inputs:  
+	print("I am not able to answer this question. Check your input.")
+	print("Thanks for using this calculator, goodbye :)")
+	exit()
+
+#The code below is unecessary, thus it will be marked as "comment". See after it how it could be written in an abbreviated way.
+
+"""
 if a == 'zero' and b == 'plus'  and c == 'zero':
     print("zero plus zero equals zero")
 if a == 'zero' and b == 'plus'  and c == 'one':
@@ -87,8 +100,20 @@ if a == 'five' and b == 'plus'  and c == 'four':
     print("five plus four equals nine")
 if a == 'five' and b == 'plus'  and c == 'five':
     print("five plus five equals ten")
+"""
+#The numbers involved in the operations are witten in a dictionary, where the number in "word" are the keys and the number in "cipher" are the values. This way we have the numbers available to do the operations in math procedure.
 
+numbers = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10}
 
+#The code above works for the operation "plus", so it should be written again considering the dictionary and the math expresion needed. Note that the result is written in word using the position number in the keys values list.
+
+if b == 'plus':
+	d = numbers[a] + numbers[c]
+	print(f'{a} plus {c} equals {list(numbers.keys())[d]}')
+
+#The following code is for "minus" operation. The abbreviated form will be find bellow it.
+
+"""
 if a == 'zero' and b == 'minus' and c == 'zero':
     print("zero minus zero equals zero")
 if a == 'zero' and b == 'minus' and c == 'one':
@@ -161,9 +186,23 @@ if a == 'five' and b == 'minus' and c == 'four':
     print("five minus four equals one")
 if a == 'five' and b == 'minus' and c == 'five':
     print("five minus five equals zero")
+"""
+#The code for operation "minus" is similar to operation "plus", except for the case the result is negative, that the absolute value of the result is applied to access to the correct position in the list (and "negative" is written before)
+
+if b == 'minus':
+	d = numbers[a] - numbers[c]
+	if d >= 0:
+		print(f'{a} minus {c} equals {list(numbers.keys())[d]}')
+	if d < 0:
+		print(f'{a} minus {c} equals negative {list(numbers.keys())[abs(d)]}')
+	
+
+#The code below has been witten before the proper calculations, in order to show the input error as soon as posible.
 
 
+"""
 if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' and not a == 'four' and not a == 'five') or (not c == 'zero' and not c == 'one' and not c == 'two' and not c == 'three' and not c == 'four' and not c == 'five') or (not b == 'plus' and not b == 'minus'):
-    print("I am not able to answer this question. Check your input.")
 
+"""
+    
 print("Thanks for using this calculator, goodbye :)")
