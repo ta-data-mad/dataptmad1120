@@ -202,7 +202,6 @@ if b == 'minus':
 
 #The code below has been witten before the proper calculations, in order to show the input error as soon as posible.
 
-
 """
 if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' and not a == 'four' and not a == 'five') or (not c == 'zero' and not c == 'one' and not c == 'two' and not c == 'three' and not c == 'four' and not c == 'five') or (not b == 'plus' and not b == 'minus'):
 
