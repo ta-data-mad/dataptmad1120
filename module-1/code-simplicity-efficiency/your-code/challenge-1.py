@@ -32,6 +32,8 @@ if a in input_numbers and c in input_numbers:
         if result in output_words:
             result = output_words[result]
             print(f'{a} {b} {c} equals {result}')
+    else:
+        print("I am not able to answer this question. Check your input.")
 else:
     print("I am not able to answer this question. Check your input.")
 print("Thanks for using this calculator, goodbye :)")
