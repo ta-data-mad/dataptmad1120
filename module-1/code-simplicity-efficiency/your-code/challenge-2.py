@@ -11,14 +11,14 @@ about simple and efficient code, refactor the code.
 import random
 import sys
 import string #so we can change the list assigned to the variable a for a concatenated list with lowercase abc and numbers
-def RandomStringGenerator(l): #idk why l=12, I just delete and it works. Delete the variable a and it list, so we can directly assign to random.choice
+def RandomStringGenerator(l): #we don't need to give a int to 'l' here. Delete the variable a and it list, so we can directly assign to random.choice
     s = ''
     while len(s)<l:
         s += random.choice(string.ascii_lowercase + string.digits)
     return s
 
-def BatchStringGenerator(n, a=8, b=12):
-    r = []
+def BatchStringGenerator(n, a, b): #same as before, don't need to give values to a and b here.
+    r = [] #The loop is too long to do list comprehension here.
     for i in range(n):
         if a < b:
             c = random.choice(range(a, b))
