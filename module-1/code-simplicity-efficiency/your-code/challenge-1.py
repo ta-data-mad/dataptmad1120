@@ -20,9 +20,12 @@ c = input('Please choose your second number (zero to five): ')
 number_inputs = ['zero', 'one', 'two', 'three', 'four', 'five']
 operation_inputs = ['plus', 'minus']
 
+#The closing message is used two times, thus it is convert in variable "close_message" to use it as many times as we want.
+close_message = "Thanks for using this calculator, goodbye :)"
+
 if a not in number_inputs or b not in operation_inputs or c not in number_inputs:  
 	print("I am not able to answer this question. Check your input.")
-	print("Thanks for using this calculator, goodbye :)")
+	print(close_message)
 	exit()
 
 #The code below is unecessary, thus it will be marked as "comment". See after it how it could be written in an abbreviated way.
@@ -205,4 +208,4 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
 
 """
     
-print("Thanks for using this calculator, goodbye :)")
+print(close_message)
