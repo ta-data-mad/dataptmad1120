@@ -12,7 +12,7 @@ The following function shows one way to solve the problem but the code is not id
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
 
-def my_function(X):
+""""def my_function(X):
     solutions = []
     for x in range(5, X):
         for y in range(4, X):
@@ -28,3 +28,50 @@ def my_function(X):
 X = input("What is the maximal length of the triangle side? Enter a number: ")
 
 print("The longest side possible is " + str(my_function(int(X))))
+
+""""my response"""
+
+
+"""""def my_function(X):
+    solutions = []
+    for x, item in enumerate(5, X):
+        for y in range(4, X):
+            for z in range(3, X):
+                if (x*x==y*y+z*z):
+                    solutions.append([x, y, z])
+    m = 0
+    for solution in solutions:
+        if m < max(solution):
+            m = max(solution)
+    return m
+
+X = input("What is the maximal length of the triangle side? Enter a number: ")
+
+print("The longest side possible is " + str(my_function(int(X))))
+
+
+"""MY CODE"""
+
+
+#We can use more descriptive names 
+
+def my_function(max_length):
+    solutions = []
+    for x in range(5, max_length):
+        for y in range(4, max_length):
+            for z in range(3, max_length):
+                if (x*x==y*y+z*z):
+                    solutions.append([x, y, z])
+    
+    longest_side_possible = 0
+
+#We can use a list comprehension
+
+    longest_side_possible = max([i for solution in solutions for i in solution])
+    return longest_side_possible
+
+max_length = input("What is the maximal length of the triangle side? Enter a number: ")
+
+#also improving how to write an string
+
+print(f'The longest side possible is {my_function(int(max_length))}')

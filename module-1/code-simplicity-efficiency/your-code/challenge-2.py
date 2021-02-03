@@ -36,3 +36,51 @@ b = input('Enter maximum string length: ')
 n = input('How many random strings to generate? ')
 
 print(BatchStringGenerator(int(n), int(a), int(b)))
+
+
+
+"""MY CODE"""
+
+#first, import libraries
+
+import random
+import sys
+
+
+#then, all the inputs in the same place with names that can be easily understood 
+
+str_length = 12
+str_list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']
+min_length = input('Enter minimum string length: ')
+max_length = input('Enter maximum string length: ')
+str_number = int(input('How many random strings to generate? '))
+
+
+#then, variables definition
+
+def RandomStringGenerator(str_length, str_list):
+    p = 0
+    s = ''
+    while p < str_length:
+        s += random.choice(str_list)
+        p += 1
+    return s    
+    
+    
+def BatchStringGenerator(n, min_length=8, max_length=12):
+    r = []
+    for i in range(str_number):
+        c = None
+        if min_len < max_length:
+            c = random.choice(range(min_length, max_length))
+        elif min_len == max_length:
+            c = min_length
+        else:
+            sys.exit('Incorrect min and max string length. Try again.')
+        r.append(RandomStringGenerator(c,str_list))
+    return r
+
+
+#finally, last print
+
+print(BatchStringGenerator(int(str_number), int(min_length), int(max_length)))

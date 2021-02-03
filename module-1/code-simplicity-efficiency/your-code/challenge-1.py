@@ -167,3 +167,27 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+
+
+"""MY CODE"""
+
+#prints to explain what this calculator is for
+print('Welcome to this calculator!')
+print('It can add and subtract whole numbers from zero to five')
+
+#needed inputs
+a = input('Please choose your first number (zero to five): ')
+b = input('What do you want to do? plus or minus: ')
+c = input('Please choose your second number (zero to five): ')
+
+#variable definitions and calculations
+def substract():
+    return f'{a} {b} {c} equals {a-b}'
+def add():
+    return f'{a} {b} {c} equals {a+b}'
+
+if a >= 6 or c >= 6
+    print("I am not able to answer this question. Check your input.")
+
+#last print to thank the user    
+print("Thanks for using this calculator, goodbye :)")
