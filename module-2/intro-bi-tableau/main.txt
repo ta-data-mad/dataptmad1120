@@ -1,0 +1,5 @@
+# The following link will take you to a Tableu Public Workbook.
+# This is the deliverable for the Lab [intro-bi-tableau], Module 2 @ ironhack
+
+https://public.tableau.com/profile/manuel1108#!/vizhome/intro-bi-tableau-ironhack/RetailSales?publish=yes
+
