@@ -907,7 +907,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' name='Number of Records by Quarter'>
+    <window class='worksheet' maximized='true' name='Number of Records by Quarter'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1284,7 +1284,7 @@
       </viewpoint>
       <simple-id uuid='{F18685BC-BD60-49B7-9286-E5AC326A4307}' />
     </window>
-    <window class='worksheet' maximized='true' name='AVG Warehouse Sales by Year/Month'>
+    <window class='worksheet' name='AVG Warehouse Sales by Year/Month'>
       <cards>
         <edge name='left'>
           <strip size='160'>
