@@ -1,0 +1,1 @@
+Issues trying to connect my Tableau Desktop Student to Tableau Public or Tableau Server.
