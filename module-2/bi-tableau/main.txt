@@ -1,0 +1,5 @@
+LAB | BI Analysis with Tableau
+
+The following URL link will take you to the Tableau Public deliverable for the LAB.
+
+https://public.tableau.com/profile/manuel1108#!/vizhome/TelcoBusinessSummary/TelcoBusinessSummaryStory?publish=yes
