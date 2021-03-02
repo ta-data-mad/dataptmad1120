@@ -1,1 +1,3 @@
-https://public.tableau.com/profile/jaime.vazquez1372#!/vizhome/Bi-Tableau/Story1?publish=yes
+This is the Tableau Link:
+
+https://public.tableau.com/profile/jaime.vazquez1372#!/vizhome/Bi-Tableau/Story1?publish=yes 
